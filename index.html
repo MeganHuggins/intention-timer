@@ -11,57 +11,50 @@
   <header>
     <h1>Intention Timer</h1>
   </header>
-  <main>
-    <section>
-      <section>
+  <main class="main-page">
+    <section class="new-activity-page">
+      <div class="medium-header">
         <h2>New Activity</h2>
-      </section>
-      <section>
-        <div class="icons-and-form">
+      </div>
+
+      <div class="all-icons">
+        <div>
           <p>Select A Category:</p>
-          <section>
-            <img src="assets/images/study-active.svg" alt="Lightbulb lighting up">
-            <p>Study</p>
-          </section>
-          <section>
-            <img src="assets/images/meditate-active.svg" alt="Lotus flower">
-            <p>Meditate</p>
-          </section>
-          <section>
-            <img src="assets/images/exercise-active.svg" alt="A running shoe">
-            <p>Exercise</p>
-          </section>
-          <!-- <form class="form" action="index.html" method="post">
-            <p class="">What would you like to accomplish during this time?</p>
-            <input type="text" class="" required></input>
-            <p class="">Minutes</p>
-            <input type="number" class="" required></input>
-            <p class="">Seconds</p>
-            <input type="number" class ="" required></input>
-            <button class="">START ACTIVITY</button>
-          </form> -->
-          <form class="form" action="index.html" method="post">
-          <label class="title-of-input" for="user-goal">What would you like to accomplish durring this time?</label>
-          <input type="text" name="user-goal" value="" />
-          ----------<section hidden>
-            -------------<img class="" src="assets/" alt="">
-            -------------<p>A description is required.</p>
-          -----------</section>
-          <label class="title-of-input" for="time-in-minutes">Minutes</label>
-          <input type="text" name="time-in-minutes" value="" />
-          <label class="title-of-input" for="time-in-seconds">Seconds</label>
-          <input type="text" name="time-in-seconds" value="" />
-          <input class="start-activity" type="submit" name="submit-button" value="START ACTIVITY">
-          </form>
+          <img class="activity-icon lightbulb" src="assets/images/study-active.svg" alt="Lightbulb lighting up">
+          <p>Study</p>
         </div>
-      </section>
+        <div>
+          <img class="activity-icon lotus-flower" src="assets/images/meditate-active.svg" alt="Lotus flower">
+          <p>Meditate</p>
+        </div>
+        <div>
+          <img class="activity-icon shoe" src="assets/images/exercise-active.svg" alt="A running shoe">
+          <p>Exercise</p>
+        </div>
+      </div>
+
+      <div>
+        <form action="index.html" method="post">
+          <label for="user-goal">What would you like to accomplish durring this time?</label>
+          <input class="long-input" type="text" name="user-goal" value="" required />
+          <section hidden>
+            <img class="" src="assets/images/warning.svg" alt="Warning Exclamation Point">
+            <p>A description is required.</p>
+          </section>
+          <label for="minutes">Minutes</label>
+          <input class="short-input" type="number" name="minutes" value="" required />
+          <label for="seconds">Seconds</label>
+          <input class="short-input" type="number" name="seconds" value="" required />
+          <input class="start-activity" type="submit" name="submit-button" value="START ACTIVITY">
+        </form>
+      </div>
     </section>
 
     <aside class="">
       <section>
         <h2>Past Activities</h2>
       </section>
-      <section>
+      <section class="past-activities-log">
         <p>You haven't logged any activities yet. Complete the form to the left to get started!</p>
       </section>
     </aside>
