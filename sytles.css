@@ -1,0 +1,58 @@
+/* target main header */
+header {
+
+}
+h1 {
+
+}
+/* target page with activity inputs */
+.new-activity-page{
+
+}
+/* manipulate size and positon of h2s */
+.medium-header {
+
+}
+h2 {
+
+}
+/* target all the icon groups and individual icons */
+.all-icons {
+
+}
+.activity-icon {
+  /* display:grid; */
+}
+.lightbulb {
+
+}
+.lotus-flower {
+
+}
+.shoe {
+
+}
+/* Target form as a whole */
+form {
+
+}
+/* Target the labels and inputs of the form */
+label {
+
+}
+input.long-input {
+
+}
+input.short-input {
+
+}
+input.start-activty {
+
+}
+/* Target aside panel along with log*/
+aside {
+
+}
+.past-activities-log {
+
+}
