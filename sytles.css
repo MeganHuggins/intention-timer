@@ -1,7 +1,7 @@
 body {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
   display: grid;
+  height: 100vh;
   margin: 0px;
   grid-template-columns: repeat(12, 1fr);
   background-color: #2B2733;
@@ -13,12 +13,16 @@ body {
 header {
 grid-column: 1/13;
 background-color: #46424D;
+height: 75%;
 }
 
 h1 {
 text-align: center;
 color: #FFF;
 font-weight: 300;
+font-size: 25px;
+position: relative;
+bottom: 8px;
 }
 
 /* Main page; always stay the same */
@@ -36,13 +40,14 @@ h2 {
 }
 
 .section-left {
-  padding: 20px;
-  margin-bottom: 30px;
+  padding: 20px 20px 0px 20px;
+  margin-bottom: 10px;
 }
 
 .move-section-in {
   background-color: #46424D;
   margin-bottom: 20px;
+  box-shadow: 10px 8px 13px 0px rgba(38,34,45,1);
 }
 
 /* Home page with activity imput options */
@@ -101,7 +106,8 @@ input.start-activty {
 }
 
 .selected-action {
-  margin-bottom: 5px;
+  position: relative;
+  top: 24px;
 }
 
 .selected-time {
@@ -110,21 +116,22 @@ input.start-activty {
   font-weight: bold;
 }
 
-.start-button {
+button.timer {
     border: 3px solid #C278FD;
-    padding: 70px;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 300;
     border-radius: 50%;
     margin-bottom: 190px;
     height: 220px;
     width: 220px;
+    color: #fff;
     background-color: #46424D;
 }
 
 /* Create new activity page */
 
 .create-new-activity {
-  height: 400px;
+  height: 525px;
 }
 button.new {
   position: relative;
@@ -142,10 +149,11 @@ aside {
   border-left: 2px solid #46424D;
   grid-column: 9/13;
   color: #CBC9CF;
+  margin-top: -20px;
 }
 
 .aside-header {
-  padding: 20px 0px 0px 20px;
+  padding: 40px 0px 0px 20px;
 }
 
 .past-activities-log {
