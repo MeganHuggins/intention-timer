@@ -121,6 +121,21 @@ input.start-activty {
     background-color: #46424D;
 }
 
+/* Create new activity page */
+
+.create-new-activity {
+  height: 400px;
+}
+button.new {
+  position: relative;
+  left: 33%;
+  top: 20%;
+  padding: 5px 60px;
+  border-radius: 5px;
+  font-size: large;
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* Target the aside portion of the webpage */
 
 aside {
