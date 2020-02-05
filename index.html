@@ -4,15 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Intention Timer</title>
-  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link rel="stylesheet" type="text/css" href="sytles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <h1>Intention Timer</h1>
   </header>
-  <main class="main-page">
-    <section class="new-activity-page">
+  <main class="clearfix">
+    <section class="new-activity-page" hidden>
       <div class="medium-header">
         <h2>New Activity</h2>
       </div>
@@ -50,24 +51,18 @@
       </div>
     </section>
 
-    <aside class="">
-      <section>
-        <h2>Past Activities</h2>
-      </section>
-      <section class="past-activities-log">
-        <p>You haven't logged any activities yet. Complete the form to the left to get started!</p>
-      </section>
-    </aside>
-
-    <section hidden>
+    <section class="section-left">
       <section>
         <h2>Current Activity</h2>
       </section>
-      <section>
+      <section class="move-section-in">
         <div class="clock-and-start-button">
-          <div class="clock">
-            <p></p>
-            <button class="">START</button>
+          <div  class="intention-and-count-down">
+            <p class=selected-action">Deep Breathing</p>
+            <p class="selected-time">03:00</p>
+          </div>
+          <div>
+            <button class="start-button">START</button>
           </div>
         </div>
       </section>
@@ -84,5 +79,15 @@
       </section>
     </section>
   </main>
+
+  <aside>
+    <section class=aside-header>
+      <h2>Past Activities</h2>
+    </section>
+    <section class="past-activities-log">
+      <p>You haven't logged any activities yet.</p>
+      <p>Complete the form to the left to get started!</p>
+    </section>
+  </aside>
 
 </body>

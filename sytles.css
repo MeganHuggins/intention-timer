@@ -1,58 +1,122 @@
+body {
+  width: 100%;
+  display: grid;
+  margin: 0px;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #2B2733;
+  font-family: 'Montserrat', sans-serif;
+}
 /* target main header */
 header {
-
+/* border: 2px solid black; */
+grid-column: 1/13;
+background-color: #46424D;
 }
 h1 {
-
+/* border: 2px solid black; */
+text-align: center;
+color: #FFF;
+}
+/* target the main page that will always stay the same */
+main {
+  /* border: 2px solid black; */
+  grid-column: 1/9;
+  /* float: left;
+  width: 65% */
+}
+.clearfix:after {
+  content: ' ';
+  display: table;
+  clear: both;
 }
 /* target page with activity inputs */
 .new-activity-page{
-
+  /* border: 2px solid black; */
 }
 /* manipulate size and positon of h2s */
 .medium-header {
-
+  /* border: 2px solid black; */
+}
+.aside-header {
+  padding: 20px 0px 0px 20px;
 }
 h2 {
-
+  color: #CBC9CF;
+  font-weight: lighter;
 }
 /* target all the icon groups and individual icons */
 .all-icons {
-
+  /* border: 2px solid black; */
 }
 .activity-icon {
   /* display:grid; */
+  /* border: 2px solid black; */
+  width: 30px;
 }
 .lightbulb {
-
+  border: 2px solid black;
 }
 .lotus-flower {
-
+  border: 2px solid black;
 }
 .shoe {
-
+  border: 2px solid black;
 }
 /* Target form as a whole */
 form {
-
+  /* border: 2px solid black; */
 }
 /* Target the labels and inputs of the form */
 label {
-
+  /* border: 2px solid black; */
 }
 input.long-input {
-
+  border: 2px solid black;
 }
 input.short-input {
-
+  border: 2px solid black;
 }
 input.start-activty {
-
+  border: 2px solid black;
 }
 /* Target aside panel along with log*/
 aside {
-
+  border-left: 2px solid #46424D;
+  grid-column: 9/13;
+  color: #CBC9CF;
 }
 .past-activities-log {
+  border: 2px solid #2B2733;
+  text-align: center;
+}
 
+.section-left {
+  padding: 20px;
+}
+.move-section-in {
+  background-color: #46424D;
+}
+.clock-and-start-button {
+    border: 1px #46424D solid;
+    text-align: center;
+    font-size: 25px;
+    color: #FFF;
+}
+.selected-action {
+  margin-bottom: 5px;
+}
+.selected-time {
+  margin: 0px 20px 30px;
+  font-size: 80px;
+  font-weight: bold;
+}
+.start-button {
+    border: 3px solid #C278FD;
+    padding: 70px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-bottom: 150px;
+    height: 220px;
+    width: 220px;
+    background-color: #46424D;
 }
