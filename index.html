@@ -1,13 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Intention Timer</title>
   <link rel="stylesheet" type="text/css" href="sytles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <h1>INTENTION TIMER</h1>
@@ -18,23 +16,43 @@
         <h2>New Activity</h2>
       </div>
       <section class="move-section-in">
-      <section class="all-input-area">
-      <p class="select-category-head">Select A Category:</p>
-      <div class="all-icons">
-        <div class="study-area">
-          <img class="activity-icon lightbulb" src="assets/images/study.svg" alt="Lightbulb lighting up">
-          <p>Study</p>
-        </div>
-        <div class="meditate-area">
-          <img class="activity-icon lotus-flower" src="assets/images/meditate.svg" alt="Lotus flower">
-          <p>Meditate</p>
-        </div>
-        <div class="exercise-area">
-          <img class="activity-icon shoe" src="assets/images/exercise.svg" alt="A running shoe">
+        <section class="all-input-area">
+          <p class="select-category-head">Select A Category:</p>
+          <div class="all-icons">
+
+            <div class="study">
+              <button class="study-button">
+
+              <image class="activity-icon lightbulb" src="assets/images/study.svg" alt="Lightbulb lighting up" />
+
+              <image class="hide lightbulb-active" src="assets/images/study-active.svg" />
+
+              <p>Study</p>
+              </button>
+            </div>
+
+            <div class="meditate">
+              <button class="meditate-button">
+              <image class="activity-icon lotus-flower" src="assets/images/meditate.svg" alt="Lotus flower">
+              <image class="lotus-flower-active hide" src="assets/images/meditate-active.svg" />
+              <p>Meditate</p>
+              </button>
+            </div>
+
+        <!-- test input for whole area -->
+            <div class="exercise">
+              <button class="exercise-button">
+                <image class="activity-icon shoe" src="assets/images/exercise.svg" alt="A running shoe">
+                <image class="hide shoe-active" src="assets/images/exercise-active.svg" >
+                <p>Exercise</p>
+              </button>
+            </div>
+        <!-- <div class="exercise-area">
+          <input type="image" class="activity-icon shoe" src="assets/images/exercise.svg" alt="A running shoe">
           <p>Exercise</p>
-        </div>
-      </div>
-    </section>
+        </div> -->
+          </div>
+        </section>
 
       <div class="user-input-form">
         <form action="index.html" method="post">
@@ -100,5 +118,5 @@
       <p>Complete the form to the left to get started!</p>
     </section>
   </aside>
-
+  <script src="main.js"></script>
 </body>
