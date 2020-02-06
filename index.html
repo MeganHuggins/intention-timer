@@ -55,7 +55,7 @@
             </section>
           <section class="minutes-input-area">
             <label for="minutes">Minutes</label>
-            <input class="short-input minutes-input" type="number" name="minutes" value="" required />
+            <input id="minutes" class="short-input minutes-input" type="number" name="minutes" value="" required />
           </section>
               <section class="minutes-hidden-warning" hidden>
           <img class="" src="assets/images/warning.svg" alt="Warning Exclamation Point">
@@ -63,7 +63,7 @@
         </section>
           <section class="seconds-input-area">
             <label for="seconds">Seconds</label>
-            <input class="short-input seconds-input" type="number" name="seconds" value="" required />
+            <input id="seconds" class="short-input seconds-input" type="number" name="seconds" value="" required />
           </section>
               <section class="seconds-hidden-warning" hidden>
           <img class="" src="assets/images/warning.svg" alt="Warning Exclamation Point">
@@ -76,7 +76,7 @@
           </section>
         </div>
       </section>
-      <section class="middle section-left start-activty-page" hidden>
+      <section class="middle section-left start-activty-page" >
       <section>
         <h2>Current Activity</h2>
       </section>
@@ -84,7 +84,8 @@
         <div class="clock-and-start-button">
           <div  class="intention-and-count-down">
             <p class="selected-action">Deep Breathing</p>
-            <p class="selected-time">03:00</p>
+            <p class="time-in-mins selected-time"></p>
+            <p class="time-in-secs selected-time"></p>
           </div>
           <div>
             <button class="timer start-button">START</button>
