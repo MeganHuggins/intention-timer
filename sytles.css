@@ -76,22 +76,41 @@ h2 {
 
 }
 /* target clickable images */
-.study-area {
+/* will remove */
+/* .study-area {
   border: 3px solid white;
   margin: 5% auto;
   padding: 5px 60px;
-}
-
-.meditate-area {
+} */
+/* will remove */
+/* .meditate-area {
   border: 3px solid white;
   margin: 5% auto;
   padding: 5px 50px;
-}
-
-.exercise-area {
+} */
+/* will remove */
+/* .exercise-area {
   border: 3px solid white;
   margin: 5% auto;
   padding: 5px 50px;
+} */
+/* hide class to for js functionality */
+.hide {
+  display: none;
+}
+/* button activities */
+
+
+.lightbulb-active {
+  width: 35px;
+}
+
+.lotus-flower-active {
+  width: 35px;
+}
+
+.shoe-active {
+  width: 35px;
 }
 .activity-icon {
   width: 35px;
@@ -108,8 +127,61 @@ h2 {
 
 .shoe {
 }
+/* button area */
+/* inactive buttons */
+.study-button {
+  color: #FFF;
+  background-color: #46424D;
+  outline: none;
+  margin: 30px 0px;
+  padding: 5px 50px;
+  border: 3px solid #FFF;
+}
 
+.meditate-button {
+  color: #FFF;
+  background-color: #46424D;
+  outline: none;
+  margin: 30px 0px;
+  padding: 5px 50px;
+  border: 3px solid #FFF;
+}
 
+.exercise-button {
+  color: #FFF;
+  background-color: #46424D;
+  outline: none;
+  margin: 30px 0px;
+  padding: 5px 50px;
+  border: 3px solid #FFF;
+}
+/* active buttons */
+.study-button-active {
+  color: #B3FD78;
+  border: 3px solid #B3FD78;
+  background-color: #46424D;
+  margin: 30px 0px;
+  padding: 5px 50px;
+  outline: none;
+}
+
+.meditate-button-active {
+  color: #C278FD;
+  border: 3px solid #C278FD;
+  background-color: #46424D;
+  margin: 30px 0px;
+  padding: 5px 50px;
+  outline: none;
+}
+
+.exercise-button-active {
+  color: #EFB7EC;
+  border: 3px solid #EFB7EC;
+  background-color: #46424D;
+  margin: 30px 0px;
+  padding: 5px 50px;
+  outline: none;
+}
 /* Form for 'main' page */
 .user-input-form {
   border: 1px solid yellow;
