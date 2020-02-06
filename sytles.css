@@ -291,3 +291,8 @@ aside {
   border: 2px solid #2B2733;
   text-align: center;
 }
+
+/* Classes for JS */
+.hide {
+  display: none;
+}
