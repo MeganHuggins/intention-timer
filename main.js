@@ -32,10 +32,14 @@ function checkInputValues() {
     var upper = document.querySelector('.upper');
     var middle = document.querySelector('.middle');
     // create page switch function
-    upper.hidden = true
-    middle.hidden = false
-    // upper.classList.add('hide')
-    // middle.classList.remove('hide')
+    // upper.hidden = true
+    // middle.hidden = false
+    upper.classList.add('hide')
+    middle.classList.remove('hide')
   }
-  // e.preventDefault()
+  var form = document.querySelector(".user-input-form");
+  form.addEventListener('submit', handleForm);
+  function handleForm(event) {
+    event.preventDefault();
+  }
 }
