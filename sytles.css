@@ -75,26 +75,7 @@ h2 {
   color: #FFF;
 
 }
-/* target clickable images */
-/* will remove */
-/* .study-area {
-  border: 3px solid white;
-  margin: 5% auto;
-  padding: 5px 60px;
-} */
-/* will remove */
-/* .meditate-area {
-  border: 3px solid white;
-  margin: 5% auto;
-  padding: 5px 50px;
-} */
-/* will remove */
-/* .exercise-area {
-  border: 3px solid white;
-  margin: 5% auto;
-  padding: 5px 50px;
-} */
-/* hide class to for js functionality */
+
 .hide {
   display: none;
 }
@@ -186,8 +167,6 @@ h2 {
 .user-input-form {
   border: 1px solid yellow;
   height: 300px;
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr); */
 }
 form {
   color: #FFF;
