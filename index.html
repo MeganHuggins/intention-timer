@@ -1,13 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Intention Timer</title>
   <link rel="stylesheet" type="text/css" href="sytles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <h1>INTENTION TIMER</h1>
@@ -18,58 +16,66 @@
         <h2>New Activity</h2>
       </div>
       <section class="move-section-in">
-      <section class="all-input-area">
-      <p class="select-category-head">Select A Category:</p>
-      <div class="all-icons">
-        <div class="study-area">
-          <img class="activity-icon lightbulb" src="assets/images/study.svg" alt="Lightbulb lighting up">
-          <p>Study</p>
-        </div>
-        <div class="meditate-area">
-          <img class="activity-icon lotus-flower" src="assets/images/meditate.svg" alt="Lotus flower">
-          <p>Meditate</p>
-        </div>
-        <div class="exercise-area">
-          <img class="activity-icon shoe" src="assets/images/exercise.svg" alt="A running shoe">
-          <p>Exercise</p>
-        </div>
-      </div>
-    </section>
+        <section class="all-input-area">
+          <p class="select-category-head">Select A Category:</p>
+          <div class="all-icons">
+            <div class="study">
+              <button class="study-button">
+              <image class="activity-icon lightbulb" src="assets/images/study.svg" alt="Lightbulb lighting up" />
+              <image class="hide lightbulb-active" src="assets/images/study-active.svg" />
+              <p>Study</p>
+              </button>
+            </div>
+            <div class="meditate">
+              <button class="meditate-button">
+              <image class="activity-icon lotus-flower" src="assets/images/meditate.svg" alt="Lotus flower">
+              <image class="lotus-flower-active hide" src="assets/images/meditate-active.svg" />
+              <p>Meditate</p>
+              </button>
+            </div>
+            <div class="exercise">
+              <button class="exercise-button">
+                <image class="activity-icon shoe" src="assets/images/exercise.svg" alt="A running shoe">
+                <image class="hide shoe-active" src="assets/images/exercise-active.svg" >
+                <p>Exercise</p>
+              </button>
+            </div>
+          </div>
+        </section>
 
-      <div class="user-input-form">
-        <form action="index.html" method="post">
+        <div class="user-input-form">
+          <form action="index.html" method="post">
           <section class="user-goal-input-area">
-          <label for="user-goal">What would you like to accomplish durring this time?</label>
-          <input class="long-input" type="text" name="user-goal" value="" required />
-        </section>
-        <section class="goal-hidden-warning" hidden>
+            <label for="user-goal">What would you like to accomplish durring this time?</label>
+          <input class="long-input" type="text" name="user- goal" value="" required />
+          </section>
+          <section class="goal-hidden-warning" hidden>
+          <img class="" src="assets/images/warning.svg" alt="Warning Exclamation Point">
+          <p>A description is required.</p>
+            </section>
+          <section class="minutes-input-area">
+            <label for="minutes">Minutes</label>
+            <input class="short-input minutes-input" type="number" name="minutes" value="" required />
+          </section>
+              <section class="minutes-hidden-warning" hidden>
           <img class="" src="assets/images/warning.svg" alt="Warning Exclamation Point">
           <p>A description is required.</p>
         </section>
-        <section class="minutes-input-area">
-          <label for="minutes">Minutes</label>
-          <input class="short-input minutes-input" type="number" name="minutes" value="" required />
-        </section>
-        <section class="minutes-hidden-warning" hidden>
+          <section class="seconds-input-area">
+            <label for="seconds">Seconds</label>
+            <input class="short-input seconds-input" type="number" name="seconds" value="" required />
+          </section>
+              <section class="seconds-hidden-warning" hidden>
           <img class="" src="assets/images/warning.svg" alt="Warning Exclamation Point">
           <p>A description is required.</p>
         </section>
-        <section class="seconds-input-area">
-          <label for="seconds">Seconds</label>
-          <input class="short-input seconds-input" type="number" name="seconds" value="" required />
-        </section>
-        <section class="seconds-hidden-warning" hidden>
-          <img class="" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p>A description is required.</p>
-        </section>
-        <section class="start-activity-area">
-          <input class="start-activity" type="submit" name="submit-button" value="START ACTIVITY">
-        </form>
-      </div>
-    </section>
-  </section>
-
-    <section class="middle section-left start-activty-page" hidden>
+          <section class="start-activity-area">
+            <input class="start-activity" type="submit" name="submit-button" value="START ACTIVITY">
+          </form>
+          </section>
+        </div>
+      </section>
+      <section class="middle section-left start-activty-page" hidden>
       <section>
         <h2>Current Activity</h2>
       </section>
@@ -81,25 +87,23 @@
           </div>
           <div>
             <button class="timer start-button">START</button>
-            <button class="timer finish-button" hidden>COMPLETE!</button>
+            <button class="timer finish-button"   hidden>COMPLETE!</button>
           </div>
         </div>
       </section>
-    </section>
-
-    <section class="section-left log-activty-page" hidden>
-      <section>
-        <h2>Completed Activity</h2>
       </section>
-      <section class="move-section-in">
+      <section class="section-left log-activty-page" hidden>
+        <section>
+          <h2>Completed Activity</h2>
+        </section>
+        <section class="move-section-in">
         <div class="create-new-activity">
           <button class="new">Create A New Activity</button>
         </div>
+        </section>
       </section>
-    </section>
-  </main>
-
-  <aside>
+    </main>
+    <aside>
     <section class=aside-header>
       <h2>Past Activities</h2>
     </section>
@@ -108,7 +112,7 @@
       <p>Complete the form to the left to get started!</p>
     </section>
   </aside>
-
+  <script src="main.js"></script>
 </body>
 <script type="text/javascript" src="main.js"></script>
 </html>
