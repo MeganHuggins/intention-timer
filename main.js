@@ -45,7 +45,7 @@ function checkInputValues() {
   }
 }
   // e.preventDefault()
-    
+
 
 // Color change with image click..not sure how event delegation, target but that is probably the best way to do it...did some research but don't understand it yet
 console.log('wtf')
@@ -118,4 +118,37 @@ function exercisePicOn() {
   meditatePicActive.classList.add("hide")
   excercisePicInactive.classList.add("hide")
   execerisePicActice.classList.remove("hide")
+}
+
+var startButton = document.querySelector('.start-button');
+startButton.addEventListener('click', countdown);
+
+function countdown() {
+  var minutes = Number(document.getElementById('minutes').value);
+  var seconds = Number(document.getElementById('seconds').value);
+  var totalSeconds = (minutes * 60) + seconds;
+  console.log(totalSeconds)
+  var minutesDisplayArea = document.querySelector('.time-in-mins');
+  var secondsDisplayArea = document.querySelector('.time-in-secs');
+  var timer = setInterval(function() {
+  // secondsDisplayArea.innerHTML = `${totalSeconds}`;
+  var minutesRemainingDecimal = (totalSeconds / 60);
+  var minutesRemaining = parseInt(minutesRemainingDecimal, 10);
+  var secondsRemaining = (totalSeconds % 60);
+    totalSeconds--;
+    if (totalSeconds < 0) {
+      minutesDisplayArea.innerHTML = ` `;
+      secondsDisplayArea.innerHTML = `<button>Log Activity</button>`;
+    } else if (secondsRemaining % 60 < 10) {
+      minutesDisplayArea.innerHTML = `${minutesRemaining}:`
+      secondsDisplayArea.innerHTML = `0${secondsRemaining}`
+    } else if ((totalSeconds) / 60 > 1) {
+      minutesDisplayArea.innerHTML = `${minutesRemaining}:`;
+      secondsDisplayArea.innerHTML = `${secondsRemaining}`;
+    } else if (totalSeconds / 60 < 1) {
+      minutesDisplayArea.innerHTML = `0:`;
+      secondsDisplayArea.innerHTML = `${secondsRemaining}`;
+    }
+  }, 1000);
+
 }
