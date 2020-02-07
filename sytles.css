@@ -68,7 +68,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   color: #FFF;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   text-align: center;
 }
 .select-category {
@@ -165,7 +165,7 @@ h2 {
 }
 /* Form for 'main' page */
 .user-input-form {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   height: 300px;
 }
 form {
@@ -198,6 +198,7 @@ label {
   grid-column: 2 /3;
   padding: 10px;
 }
+
 input.long-input {
   width: 600px;
   background-color: #46424D;
@@ -259,6 +260,7 @@ button.timer {
     width: 220px;
     color: #fff;
     background-color: #46424D;
+    outline: none;
 }
 
 /* Create new activity page */
@@ -297,4 +299,38 @@ aside {
 /* Classes for JS */
 .hide {
   display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Dave's starting new section! Will need to reorganize!  */
+.start-activity-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  outline: none;
+}
+.start-activity-input {
+  float: right;
+  grid-column: 3 / 4;
+  width: 50%;
+  font-size: 24px;
+  outline: none;
+}
+
+.goal-warning-image,
+.minutes-warning-image,
+.seconds-warning-image {
+  width: 5%;
+}
+
+.log-activity-button {
+  
 }
