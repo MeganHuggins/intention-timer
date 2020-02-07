@@ -10,6 +10,7 @@ var submit = document.querySelector('.start-activity');
 submit.addEventListener('click', checkInputValues);
 //create function for hidden warning to appear if no input present
 function checkInputValues() {
+  // debugger;
   //write of or statement
   var goal = true
   if (userGoalInput.value==="") {
@@ -33,19 +34,17 @@ function checkInputValues() {
     var upper = document.querySelector('.upper');
     var middle = document.querySelector('.middle');
     // create page switch function
-    // upper.hidden = true
-    // middle.hidden = false
     upper.classList.add('hide')
     middle.classList.remove('hide')
   }
   var form = document.querySelector(".user-input-form");
-  form.addEventListener('submit', handleForm);
   function handleForm(event) {
     event.preventDefault();
   }
+  form.addEventListener('submit', handleForm);
 }
   // e.preventDefault()
-    
+
 
 // Color change with image click..not sure how event delegation, target but that is probably the best way to do it...did some research but don't understand it yet
 console.log('wtf')

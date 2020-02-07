@@ -53,37 +53,43 @@ h2 {
 
 /* Home page with activity imput options */
 
-.new-activity-page{
-
-}
 .all-input-area {
-  /* border: 1px solid green; */
+  position: relative;
+  top: 25px;
 }
+
 .select-category-head {
   color: #FFF;
   margin: 10px 70px;
   font-size: 20px;
+  position: relative;
+  top: 20px;
 }
+
 .all-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   color: #FFF;
-  border: 1px solid red;
   text-align: center;
 }
+
 .select-category {
   color: #FFF;
 
 }
 
-.hide {
-  display: none;
-}
-/* button activities */
+/* activities button styling */
 
+.lightbulb {
+  grid-template: 2 / 3;
+}
 
 .lightbulb-active {
   width: 35px;
+}
+
+.lotus-flower {
+  grid-template: 3 / 4;
 }
 
 .lotus-flower-active {
@@ -93,49 +99,25 @@ h2 {
 .shoe-active {
   width: 35px;
 }
+
 .activity-icon {
-  width: 35px;
-  grid-template: 1 / 2;
+  width: 28px;
+  position: relative;
+  top: 17px; 
 }
 
-.lightbulb {
-  grid-template: 2 / 3;
-}
-
-.lotus-flower {
-  grid-template: 3 / 4;
-}
-
-.shoe {
-}
 /* button area */
 /* inactive buttons */
-.study-button {
+.all-icon-buttons {
   color: #FFF;
   background-color: #46424D;
   outline: none;
   margin: 30px 0px;
-  padding: 5px 50px;
-  border: 3px solid #FFF;
+  padding: 8px 60px 0px 60px;
+  border: 1px solid #FFF;
+  font-size: 17px;
 }
 
-.meditate-button {
-  color: #FFF;
-  background-color: #46424D;
-  outline: none;
-  margin: 30px 0px;
-  padding: 5px 50px;
-  border: 3px solid #FFF;
-}
-
-.exercise-button {
-  color: #FFF;
-  background-color: #46424D;
-  outline: none;
-  margin: 30px 0px;
-  padding: 5px 50px;
-  border: 3px solid #FFF;
-}
 /* active buttons */
 .study-button-active {
   color: #B3FD78;
@@ -163,9 +145,9 @@ h2 {
   padding: 5px 50px;
   outline: none;
 }
+
 /* Form for 'main' page */
 .user-input-form {
-  border: 1px solid yellow;
   height: 300px;
 }
 form {
@@ -194,10 +176,12 @@ label {
   grid-column: 2 / 3;
   padding: 0px 50px 0px 0px;
 }
+
 .start-activity-area {
   grid-column: 2 /3;
   padding: 10px;
 }
+
 input.long-input {
   width: 600px;
   background-color: #46424D;
