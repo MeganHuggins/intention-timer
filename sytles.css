@@ -53,43 +53,37 @@ h2 {
 
 /* Home page with activity imput options */
 
-.all-input-area {
-  position: relative;
-  top: 25px;
-}
+.new-activity-page{
 
+}
+.all-input-area {
+  /* border: 1px solid green; */
+}
 .select-category-head {
   color: #FFF;
   margin: 10px 70px;
   font-size: 20px;
-  position: relative;
-  top: 20px;
 }
-
 .all-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   color: #FFF;
+  /* border: 1px solid red; */
   text-align: center;
 }
-
 .select-category {
   color: #FFF;
 
 }
 
-/* activities button styling */
-
-.lightbulb {
-  grid-template: 2 / 3;
+.hide {
+  display: none;
 }
+/* button activities */
+
 
 .lightbulb-active {
   width: 35px;
-}
-
-.lotus-flower {
-  grid-template: 3 / 4;
 }
 
 .lotus-flower-active {
@@ -99,25 +93,49 @@ h2 {
 .shoe-active {
   width: 35px;
 }
-
 .activity-icon {
-  width: 28px;
-  position: relative;
-  top: 17px; 
+  width: 35px;
+  grid-template: 1 / 2;
 }
 
+.lightbulb {
+  grid-template: 2 / 3;
+}
+
+.lotus-flower {
+  grid-template: 3 / 4;
+}
+
+.shoe {
+}
 /* button area */
 /* inactive buttons */
-.all-icon-buttons {
+.study-button {
   color: #FFF;
   background-color: #46424D;
   outline: none;
   margin: 30px 0px;
-  padding: 8px 60px 0px 60px;
-  border: 1px solid #FFF;
-  font-size: 17px;
+  padding: 5px 50px;
+  border: 3px solid #FFF;
 }
 
+.meditate-button {
+  color: #FFF;
+  background-color: #46424D;
+  outline: none;
+  margin: 30px 0px;
+  padding: 5px 50px;
+  border: 3px solid #FFF;
+}
+
+.exercise-button {
+  color: #FFF;
+  background-color: #46424D;
+  outline: none;
+  margin: 30px 0px;
+  padding: 5px 50px;
+  border: 3px solid #FFF;
+}
 /* active buttons */
 .study-button-active {
   color: #B3FD78;
@@ -145,9 +163,9 @@ h2 {
   padding: 5px 50px;
   outline: none;
 }
-
 /* Form for 'main' page */
 .user-input-form {
+  /* border: 1px solid yellow; */
   height: 300px;
 }
 form {
@@ -176,7 +194,6 @@ label {
   grid-column: 2 / 3;
   padding: 0px 50px 0px 0px;
 }
-
 .start-activity-area {
   grid-column: 2 /3;
   padding: 10px;
@@ -226,9 +243,11 @@ input.start-activty {
 }
 
 .selected-time {
-  margin: 0px 20px 30px;
+  margin: 0px 0px 30px 0px;
   font-size: 80px;
   font-weight: bold;
+  display: inline-block;
+
 }
 
 button.timer {
@@ -241,6 +260,7 @@ button.timer {
     width: 220px;
     color: #fff;
     background-color: #46424D;
+    outline: none;
 }
 
 /* Create new activity page */
@@ -279,4 +299,38 @@ aside {
 /* Classes for JS */
 .hide {
   display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Dave's starting new section! Will need to reorganize!  */
+.start-activity-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  outline: none;
+}
+.start-activity-input {
+  float: right;
+  grid-column: 3 / 4;
+  width: 50%;
+  font-size: 24px;
+  outline: none;
+}
+
+.goal-warning-image,
+.minutes-warning-image,
+.seconds-warning-image {
+  width: 5%;
+}
+
+.log-activity-button {
+
 }
