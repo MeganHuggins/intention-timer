@@ -46,7 +46,6 @@
 // }
   //***** e.preventDefault()
 
-
 // Color change with image click..not sure how event delegation, target but that is probably the best way to do it...did some research but don't understand it yet
 console.log('wtf')
 var studyButton = document.querySelector(".study-button")
@@ -430,7 +429,6 @@ function checkInputValues() {
   }
 
 // variables to target the clickable 3 options value...
-// 
 //   function activitySelected() {
 //   var studySelected = document.querySelector(".study-button");
 //   var meditateSelected = document.querySelector(".meditate-button");
