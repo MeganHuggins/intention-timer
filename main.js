@@ -1,4 +1,3 @@
-
 //
 // //*****If user input goal minutes or seconds is not filled out have warning message appear
 // //*****target the user goal input, the minutes input, the seconds input, hidden warning elements and the start activty button
@@ -46,7 +45,6 @@
 //   }
 // }
   //***** e.preventDefault()
-
 
 // Color change with image click..not sure how event delegation, target but that is probably the best way to do it...did some research but don't understand it yet
 console.log('wtf')
@@ -431,7 +429,6 @@ function checkInputValues() {
   }
 
 // variables to target the clickable 3 options value...
-//
 //   function activitySelected() {
 //   var studySelected = document.querySelector(".study-button");
 //   var meditateSelected = document.querySelector(".meditate-button");
