@@ -455,11 +455,17 @@ function checkInputValues() {
   }
   var seconds = true
   if (secondsInput.value==="") {
-    document.querySelector('.seconds-hidden-warning').hidden =
-    false;
+    document.querySelector('.seconds-hidden-warning').hidden = false;
     seconds = false;
   }
-  if (goal && minutes && seconds) {
+  var isActivitySelected;
+  if (activitySelected==="study" || activitySelected==="meditate" || activitySelected==="exercise") {
+    isActivitySelected = true;
+  } else {
+    document.querySelector('.activity-hidden-warning').hidden = false;
+    activitySelected = false;
+  }
+  if (isActivitySelected && goal && minutes && seconds) {
     //*****When Start Activity is clicked switch from 'main' page to 'timer'
     // *****target the top and middle pages and Start button
     var upper = document.querySelector('.upper');
