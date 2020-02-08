@@ -20,27 +20,31 @@
           <p class="select-category-head">Select A Category:</p>
           <div class="all-icons">
             <div class="study-area">
-              <button id="study-button" class="study-button" value="study-button">
+              <button class="study-button" value="study-button">
               <image class="activity-icon lightbulb" src="assets/images/study.svg" alt="Lightbulb lighting up" />
               <image class="hide lightbulb-active" src="assets/images/study-active.svg" />
               <p>Study</p>
               </button>
             </div>
             <div class="meditate" value="meditate-button">
-              <button id="meditate-button" class="meditate-button">
+              <button class="meditate-button">
               <image class="activity-icon lotus-flower" src="assets/images/meditate.svg" alt="Lotus flower">
               <image class="lotus-flower-active hide" src="assets/images/meditate-active.svg" />
               <p>Meditate</p>
               </button>
             </div>
             <div class="exercise">
-              <button id="exercise-button" class="exercise-button" value="exercise-button">
+              <button class="exercise-button" value="exercise-button">
                 <image class="activity-icon shoe" src="assets/images/exercise.svg" alt="A running shoe">
                 <image class="hide shoe-active" src="assets/images/exercise-active.svg" >
                 <p>Exercise</p>
               </button>
             </div>
           </div>
+          <section class="activity-hidden-warning" hidden>
+          <img class="goal-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
+          <p>An activity is required.</p>
+            </section>
         </section>
 
         <div class="user-input-form">
@@ -51,7 +55,7 @@
           </section>
           <section class="goal-hidden-warning" hidden>
           <img class="goal-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p>A description is required.</p>
+          <p>A description are required.</p>
             </section>
           <section class="minutes-input-area">
             <label for="minutes">Minutes</label>
@@ -59,7 +63,7 @@
           </section>
               <section class="minutes-hidden-warning" hidden>
           <img class="minutes-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p>A description is required.</p>
+          <p>Minutes are required.</p>
         </section>
           <section class="seconds-input-area">
             <label for="seconds">Seconds</label>
@@ -67,7 +71,7 @@
           </section>
               <section class="seconds-hidden-warning" hidden>
           <img class="seconds-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p>A description is required.</p>
+          <p>Seconds are required.</p>
         </section>
         </form>
           <section class="start-activity-area">
