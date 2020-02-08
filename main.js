@@ -1,50 +1,68 @@
-//
+
 // //*****If user input goal minutes or seconds is not filled out have warning message appear
 // //*****target the user goal input, the minutes input, the seconds input, hidden warning elements and the start activty button
-// var userGoalInput = document.querySelector('.long-input');
-// var minutesInput = document.querySelector('.minutes-input');
-// var secondsInput = document.querySelector('.seconds-input')
-// var hiddenWarning = document.querySelector('.hidden-warning');
-// var submit = document.querySelector('.start-activity');
-// //*****create EventListener for submit
-// submit.addEventListener('click', checkInputValues);
-// //*****create function for hidden warning to appear if no input present
-// function checkInputValues() {
-//   //*****write of or statement
-//   var goal = true
-//   if (userGoalInput.value==="") {
-//     document.querySelector('.goal-hidden-warning').hidden = false;
-//     goal = false;
-//   }
-//   var minutes = true
-//   if (minutesInput.value==="") {
-//     document.querySelector('.minutes-hidden-warning').hidden = false;
-//     minutes = false;
-//   }
-//   var seconds = true
-//   if (secondsInput.value==="") {
-//     document.querySelector('.seconds-hidden-warning').hidden =
-//     false;
-//     seconds = false;
-//   }
-//   if (goal && minutes && seconds) {
-//     //*****When Start Activity is clicked switch from 'main' page to 'timer'
-//     // *****target the top and middle pages and Start button
-//     var upper = document.querySelector('.upper');
-//     var middle = document.querySelector('.middle');
-//     // *****create page switch function
-//     // *****upper.hidden = true
-//     //***** middle.hidden = false
-//     upper.classList.add('hide')
-//     middle.classList.remove('hide')
-//   }
-//   var form = document.querySelector(".user-input-form");
-//   form.addEventListener('submit', handleForm);
-//   function handleForm(event) {
-//     event.preventDefault();
-//   }
-// }
-  //***** e.preventDefault()
+//
+// Megans top section with daves code put in for goal and mins/secs
+var userGoalInput = document.querySelector('.long-input');
+var minutesInput = document.querySelector('.minutes-input');
+var secondsInput = document.querySelector('.seconds-input')
+var hiddenWarning = document.querySelector('.hidden-warning');
+var submit = document.querySelector('.start-activity');
+//*****create EventListener for submit
+submit.addEventListener('click', checkInputValues);
+//*****create function for hidden warning to appear if no input present
+function checkInputValues() {
+  //*****write of or statement
+  var goal = true
+  if (userGoalInput.value==="") {
+    document.querySelector('.goal-hidden-warning').hidden = false;
+    goal = false;
+  }
+  var minutes = true
+  if (minutesInput.value==="") {
+    document.querySelector('.minutes-hidden-warning').hidden = false;
+    minutes = false;
+  }
+  var seconds = true
+  if (secondsInput.value==="") {
+    document.querySelector('.seconds-hidden-warning').hidden = false;
+    seconds = false;
+  }
+  var isActivitySelected;
+  if (activitySelected==="study" || activitySelected==="meditate" || activitySelected==="exercise") {
+    isActivitySelected = true;
+  } else {
+    document.querySelector('.activity-hidden-warning').hidden = false;
+    activitySelected = false;
+  }
+  if (isActivitySelected && goal && minutes && seconds) {
+    var upper = document.querySelector('.upper');
+    var middle = document.querySelector('.middle');
+    upper.classList.add('hide')
+    middle.classList.remove('hide')
+    var minutes = Number(document.getElementById('minutes').value);
+    var seconds = Number(document.getElementById('seconds').value);
+    var minutesDisplayArea = document.querySelector('.time-in-mins');
+    var secondsDisplayArea = document.querySelector('.time-in-secs');
+    var userGoal = document.querySelector('.long-input').value;
+    var userGoalDisplayArea = document.querySelector('.selected-action')
+    userGoalDisplayArea.innerHTML = `${userGoal}`
+    upper.classList.add('hide');
+    middle.classList.remove('hide');
+    if (seconds < 10) {
+    minutesDisplayArea.innerHTML = `${minutes}:`;
+    secondsDisplayArea.innerHTML = `0${seconds}`;
+  } else {
+    minutesDisplayArea.innerHTML = `${minutes}:`;
+    secondsDisplayArea.innerHTML = `${seconds}`;
+    }
+  }
+  var form = document.querySelector(".user-input-form");
+  form.addEventListener('submit', handleForm);
+  function handleForm(event) {
+    event.preventDefault();
+  }
+  }
 
 // Color change with image click..not sure how event delegation, target but that is probably the best way to do it...did some research but don't understand it yet
 console.log('wtf')
@@ -129,21 +147,20 @@ function countdown() {
   // console.log(totalSeconds)
   var minutesDisplayArea = document.querySelector('.time-in-mins');
   var secondsDisplayArea = document.querySelector('.time-in-secs');
-  var createNewActivityArea = document.querySelector('.create-new-activity')
+  var logButtonArea = document.querySelector('.log-button-area')
+
+  // var logActivityButton = document.querySelector(".log-activity-button");
+
   var timer = setInterval(function() {
   var minutesRemainingDecimal = (totalSeconds / 60);
   var minutesRemaining = parseInt(minutesRemainingDecimal, 10);
   var secondsRemaining = (totalSeconds % 60);
     totalSeconds--;
     if (totalSeconds < 0) {
-      // secondsDisplayArea.innerHTML = `00:00`;
-      secondsDisplayArea.innerHTML = 'Wow, You did it!'
+      secondsDisplayArea.innerHTML = 'Party On, Garth!'
       minutesDisplayArea.innerHTML = ` `;
-      // timer.classList.remove('hide')
       startButton.innerHTML= `COMPLETE!`
-      createNewActivityArea.innerHTML =`<button class="log-activity-button">Log Activity</button>`;
-      // secondsDisplayArea.innerHTML = `<button>Log Activity</button>`;
-      // alert("DONE");
+      logButtonArea.classList.remove('hide')
     } else if (secondsRemaining % 60 < 10) {
       minutesDisplayArea.innerHTML = `${minutesRemaining}:`
       secondsDisplayArea.innerHTML = `0${secondsRemaining}`
@@ -158,268 +175,44 @@ function countdown() {
 
 }
 
-
-// HEY DAVE!!!!!!!!!copy and paste below 250 before commiting!!!!!
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// Dave's disappear code
-// var upper = document.querySelector('.upper');
-// var middle = document.querySelector('.middle');
-// var startActivityButton = document.querySelector('.start-activity-input')
-// startActivityButton.addEventListener('click', switchToStartActivityPage)
-
-
-// function switchToStartActivityPage() {
-//   var minutes = Number(document.getElementById('minutes').value);
-//   var seconds = Number(document.getElementById('seconds').value);
-//   var minutesDisplayArea = document.querySelector('.time-in-mins');
-//   var secondsDisplayArea = document.querySelector('.time-in-secs');
-//   var userGoal = document.querySelector('.long-input').value;
-//   // maybe rename selected action class to user-goal-display???
-//   var userGoalDisplayArea = document.querySelector('.selected-action')
-//   userGoalDisplayArea.innerHTML = `${userGoal}`
-//   upper.classList.add('hide');
-//   middle.classList.remove('hide');
-//   if (seconds < 10) {
-//   minutesDisplayArea.innerHTML = `${minutes}:`;
-//   secondsDisplayArea.innerHTML = `0${seconds}`;
-// } else {
-//   minutesDisplayArea.innerHTML = `${minutes}:`;
-//   secondsDisplayArea.innerHTML = `${seconds}`;
-//   }
-// }
-//
-//
-
-
-// dave trying to implement current activity and time display with megans function to require inputs and switch pages
-
-
-// function switchToStartActivityPage() {
-//   var minutes = Number(document.getElementById('minutes').value);
-//   var seconds = Number(document.getElementById('seconds').value);
-//   var minutesDisplayArea = document.querySelector('.time-in-mins');
-//   var secondsDisplayArea = document.querySelector('.time-in-secs');
-//   var userGoal = document.querySelector('.long-input').value;
-//   // maybe rename selected action class to user-goal-display???
-//   var userGoalDisplayArea = document.querySelector('.selected-action')
-//   userGoalDisplayArea.innerHTML = `${userGoal}`
-//   upper.classList.add('hide');
-//   middle.classList.remove('hide');
-//   if (seconds < 10) {
-//   minutesDisplayArea.innerHTML = `${minutes}:`;
-//   secondsDisplayArea.innerHTML = `0${seconds}`;
-// } else {
-//   minutesDisplayArea.innerHTML = `${minutes}:`;
-//   secondsDisplayArea.innerHTML = `${seconds}`;
-//   }
-// }
-
-// dave trying to make it not allow you to even enter e, + or -
-// var userGoalInput = document.querySelector('.long-input');
-// var minutesInput = document.querySelector('.minutes-input');
-// var secondsInput = document.querySelector('.seconds-input')
-// var hiddenWarning = document.querySelector('.hidden-warning');
-// var submit = document.querySelector('.start-activity');
-// //*****create EventListener for submit
-// submit.addEventListener('click', checkInputValues);
-// //*****create function for hidden warning to appear if no input present
-// function checkInputValues() {
-//   //*****write of or statement
-//   var goal = true
-//   if (userGoalInput.value==="") {
-//     document.querySelector('.goal-hidden-warning').hidden = false;
-//     goal = false;
-//   }
-//   var minutes = true
-//   if (minutesInput.value==="") {
-//     document.querySelector('.minutes-hidden-warning').hidden = false;
-//     minutes = false;
-//   }
-//   var seconds = true
-//   if (secondsInput.value==="") {
-//     document.querySelector('.seconds-hidden-warning').hidden =
-//     false;
-//     seconds = false;
-//   }
-//   if (goal && minutes && seconds) {
-//     //*****When Start Activity is clicked switch from 'main' page to 'timer'
-//     // *****target the top and middle pages and Start button
-//     var upper = document.querySelector('.upper');
-//     var middle = document.querySelector('.middle');
-//     // *****create page switch function
-//     // *****upper.hidden = true
-//     //***** middle.hidden = false
-//     upper.classList.add('hide')
-//     middle.classList.remove('hide')
-//     var minutes = Number(document.getElementById('minutes').value);
-//     var seconds = Number(document.getElementById('seconds').value);
-//     var minutesDisplayArea = document.querySelector('.time-in-mins');
-//     var secondsDisplayArea = document.querySelector('.time-in-secs');
-//     var userGoal = document.querySelector('.long-input').value;
-//     var userGoalDisplayArea = document.querySelector('.selected-action')
-//     userGoalDisplayArea.innerHTML = `${userGoal}`
-//     upper.classList.add('hide');
-//     middle.classList.remove('hide');
-//     if (seconds < 10) {
-//     minutesDisplayArea.innerHTML = `${minutes}:`;
-//     secondsDisplayArea.innerHTML = `0${seconds}`;
-//   } else {
-//     minutesDisplayArea.innerHTML = `${minutes}:`;
-//     secondsDisplayArea.innerHTML = `${seconds}`;
-//     }
-//   }
-//   var form = document.querySelector(".user-input-form");
-//   form.addEventListener('submit', handleForm);
-//   function handleForm(event) {
-//     event.preventDefault();
-//   }
-// }
-
-// dave working on button to change depending on activity selected
 var activitySelected;
 var timer = document.querySelector('.timer')
+
 studyButton.onclick = function() {
   activitySelected = 'study'
   console.log(activitySelected)
   timer.classList.add('timer-study')
 }
+
 meditateButton.onclick = function() {
   activitySelected = 'meditate'
   console.log(activitySelected)
   timer.classList.add('timer-meditate')
 }
+
 exerciseButton.onclick = function() {
   activitySelected = 'exercise'
   console.log(activitySelected)
   timer.classList.add('timer-exercise')
 }
 
+//dave trying to get the cards to go to past activity log
+// may have duplicate names
+var pastActivitiesLog = document.querySelector(".past-activities-log");
+var logActivityButton = document.querySelector(".log-activity-button");
+logActivityButton.addEventListener("click", logActivity);
 
+function logActivity() {
+  pastActivitiesLog.insertAdjacentHTML('beforeend', `test test test`)
+  console.log('test')
+}
 
-// this may or may not need to go into the swith pages code block
-// var activitySelected;
-// var timer = document.querySelector('.timer')
-// document.getElementById('study-button').onclick = function() {
-//   activitySelected = 1;
-// }
-// document.getElementByID('meditate-button').onclick = function() {
-//   activitySelected = 2;
-// }
-// document.getElementById('exercise-button').onclick = function() {
-//   activitySelected = 3;
-// }
-//
-// console.log(activitySelected);
-
-// function changeButtonColor() {
-//   if (activitySelected == 1) {
-//     console.log('study')
-//     // timer.classList.add('.timer-study')
-//   } else if (activitySelected == 2) {
-//     console.log('meditate')
-//     // timer.classList.add('.timer-meditate')
-//   } else if (activitySelected == 3) {
-//     console.log('exercise')
-//     // timer.classList.add('.timer-exercise')
-//   }
-// }
 
 
 
 
 
+// HEY DAVE!!!!!!!!!copy and paste below 250 before commiting!!!!!
 
 
 
@@ -432,73 +225,7 @@ exerciseButton.onclick = function() {
 
 
 
-// Megans top section with daves code put in for goal and mins/secs
-var userGoalInput = document.querySelector('.long-input');
-var minutesInput = document.querySelector('.minutes-input');
-var secondsInput = document.querySelector('.seconds-input')
-var hiddenWarning = document.querySelector('.hidden-warning');
-var submit = document.querySelector('.start-activity');
-//*****create EventListener for submit
-submit.addEventListener('click', checkInputValues);
-//*****create function for hidden warning to appear if no input present
-function checkInputValues() {
-  //*****write of or statement
-  var goal = true
-  if (userGoalInput.value==="") {
-    document.querySelector('.goal-hidden-warning').hidden = false;
-    goal = false;
-  }
-  var minutes = true
-  if (minutesInput.value==="") {
-    document.querySelector('.minutes-hidden-warning').hidden = false;
-    minutes = false;
-  }
-  var seconds = true
-  if (secondsInput.value==="") {
-    document.querySelector('.seconds-hidden-warning').hidden = false;
-    seconds = false;
-  }
-  var isActivitySelected;
-  if (activitySelected==="study" || activitySelected==="meditate" || activitySelected==="exercise") {
-    isActivitySelected = true;
-  } else {
-    document.querySelector('.activity-hidden-warning').hidden = false;
-    activitySelected = false;
-  }
-  if (isActivitySelected && goal && minutes && seconds) {
-    //*****When Start Activity is clicked switch from 'main' page to 'timer'
-    // *****target the top and middle pages and Start button
-    var upper = document.querySelector('.upper');
-    var middle = document.querySelector('.middle');
-    // *****create page switch function
-    // *****upper.hidden = true
-    //***** middle.hidden = false
-    upper.classList.add('hide')
-    middle.classList.remove('hide')
-    var minutes = Number(document.getElementById('minutes').value);
-    var seconds = Number(document.getElementById('seconds').value);
-    var minutesDisplayArea = document.querySelector('.time-in-mins');
-    var secondsDisplayArea = document.querySelector('.time-in-secs');
-    var userGoal = document.querySelector('.long-input').value;
-    var userGoalDisplayArea = document.querySelector('.selected-action')
-    userGoalDisplayArea.innerHTML = `${userGoal}`
-    upper.classList.add('hide');
-    middle.classList.remove('hide');
-    if (seconds < 10) {
-    minutesDisplayArea.innerHTML = `${minutes}:`;
-    secondsDisplayArea.innerHTML = `0${seconds}`;
-  } else {
-    minutesDisplayArea.innerHTML = `${minutes}:`;
-    secondsDisplayArea.innerHTML = `${seconds}`;
-    }
-  }
-  var form = document.querySelector(".user-input-form");
-  form.addEventListener('submit', handleForm);
-  function handleForm(event) {
-    event.preventDefault();
-  }
 
-  }
 
 
 
@@ -531,71 +258,4 @@ function checkInputValues() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// daves section
+// New Sections below
