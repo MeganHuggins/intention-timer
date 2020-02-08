@@ -1,4 +1,4 @@
-//
+
 // //*****If user input goal minutes or seconds is not filled out have warning message appear
 // //*****target the user goal input, the minutes input, the seconds input, hidden warning elements and the start activty button
 // var userGoalInput = document.querySelector('.long-input');
