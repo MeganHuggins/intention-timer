@@ -42,6 +42,8 @@ h2 {
 .section-left {
   padding: 20px 20px 0px 20px;
   margin-bottom: 10px;
+  position: relative;
+  bottom: 30px;
 }
 
 .move-section-in {
@@ -66,7 +68,7 @@ h2 {
   font-size: 18px;
   position: relative;
   top: 25px;
-  left: 35px;
+  left: 50px;
 }
 
 .all-icons {
@@ -78,7 +80,7 @@ h2 {
 
 .study-area {
   position: relative;
-  left: 10%;
+  left: 15%;
 }
 .meditate {
   position: relative;
@@ -86,7 +88,7 @@ h2 {
 }
 .exercise {
   position: relative;
-  right: 55px;
+  right: 70px;
 }
 
 .select-category {
@@ -229,10 +231,15 @@ form {
   color: #FFF;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  left: 70px;
+  bottom: 20px;
+  font-size: 18px;
 }
 
 label {
   display: block;
+  padding-bottom: 10px;
 }
 
 .user-goal-input-area {
@@ -245,12 +252,12 @@ label {
 .minutes-input-area {
   grid-column: 1 /2;
   padding: 10px;
-  margin: 0px 0px 0px 40px;
+  margin: 15px 0px 0px 40px;
 }
 
 .seconds-input-area {
   grid-column: 2 / 3;
-  padding: 0px 50px 0px 0px;
+  padding: 23px 50px 0px 0px;
 }
 
 .start-activity-area {
@@ -259,7 +266,7 @@ label {
 }
 
 input.long-input {
-  width: 600px;
+  width: 80%;
   background-color: #46424D;
   border-top: 0px;
   border-right: 0px;
@@ -271,7 +278,7 @@ input.long-input {
 }
 
 input.short-input {
-  width: 300px;
+  width: 60%;
   background-color: #46424D;
   border-top: 0px;
   border-right: 0px;
@@ -342,7 +349,7 @@ aside {
   border-left: 2px solid #46424D;
   grid-column: 9/13;
   color: #CBC9CF;
-  margin-top: -20px;
+  margin-top: -43px;
 }
 
 .aside-header {
@@ -379,8 +386,7 @@ aside {
 }
 .start-activity-input {
   float: right;
-  grid-column: 3 / 4;
-  width: 50%;
+  width: 100%;
   font-size: 24px;
   outline: none;
 }
