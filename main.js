@@ -367,6 +367,71 @@ function countdown() {
 //   }
 // }
 
+// dave working on button to change depending on activity selected
+var activitySelected;
+var timer = document.querySelector('.timer')
+studyButton.onclick = function() {
+  activitySelected = 'study'
+  console.log(activitySelected)
+  timer.classList.add('timer-study')
+}
+meditateButton.onclick = function() {
+  activitySelected = 'meditate'
+  console.log(activitySelected)
+  timer.classList.add('timer-meditate')
+}
+exerciseButton.onclick = function() {
+  activitySelected = 'exercise'
+  console.log(activitySelected)
+  timer.classList.add('timer-exercise')
+}
+
+
+
+// this may or may not need to go into the swith pages code block
+// var activitySelected;
+// var timer = document.querySelector('.timer')
+// document.getElementById('study-button').onclick = function() {
+//   activitySelected = 1;
+// }
+// document.getElementByID('meditate-button').onclick = function() {
+//   activitySelected = 2;
+// }
+// document.getElementById('exercise-button').onclick = function() {
+//   activitySelected = 3;
+// }
+//
+// console.log(activitySelected);
+
+// function changeButtonColor() {
+//   if (activitySelected == 1) {
+//     console.log('study')
+//     // timer.classList.add('.timer-study')
+//   } else if (activitySelected == 2) {
+//     console.log('meditate')
+//     // timer.classList.add('.timer-meditate')
+//   } else if (activitySelected == 3) {
+//     console.log('exercise')
+//     // timer.classList.add('.timer-exercise')
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Megans top section with daves code put in for goal and mins/secs
 var userGoalInput = document.querySelector('.long-input');
 var minutesInput = document.querySelector('.minutes-input');
@@ -390,11 +455,17 @@ function checkInputValues() {
   }
   var seconds = true
   if (secondsInput.value==="") {
-    document.querySelector('.seconds-hidden-warning').hidden =
-    false;
+    document.querySelector('.seconds-hidden-warning').hidden = false;
     seconds = false;
   }
-  if (goal && minutes && seconds) {
+  var isActivitySelected;
+  if (activitySelected==="study" || activitySelected==="meditate" || activitySelected==="exercise") {
+    isActivitySelected = true;
+  } else {
+    document.querySelector('.activity-hidden-warning').hidden = false;
+    activitySelected = false;
+  }
+  if (isActivitySelected && goal && minutes && seconds) {
     //*****When Start Activity is clicked switch from 'main' page to 'timer'
     // *****target the top and middle pages and Start button
     var upper = document.querySelector('.upper');
@@ -426,20 +497,8 @@ function checkInputValues() {
   function handleForm(event) {
     event.preventDefault();
   }
+
   }
-
-// variables to target the clickable 3 options value...
-//   function activitySelected() {
-//   var studySelected = document.querySelector(".study-button");
-//   var meditateSelected = document.querySelector(".meditate-button");
-//   var exerciseSelected = document.querySelector(".exercise-butt");
-//   if studySelected {
-//     console.log('Study!');
-//   } else {
-//     console.log('not study')
-//   }
-// }
-
 
 
 
