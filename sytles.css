@@ -405,3 +405,10 @@ aside {
     background-color: #46424D;
     outline: none;
 }
+/* create new activity button, with margin to keep larger section */
+
+.create-new-activity-button {
+  width: 50%;
+  margin: 10% 10% 45% 10%;
+}
+.log
