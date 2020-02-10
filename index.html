@@ -48,7 +48,7 @@
         </section>
 
         <div class="user-input-form">
-          <form action="index.html" method="post">
+          <form class="input-form" action="index.html" method="post">
           <section class="user-goal-input-area">
             <label for="user-goal">What would you like to accomplish durring this time?</label>
           <input class="long-input" type="text" name="user-x`goal" value="" required />
@@ -84,8 +84,13 @@
 
       <section class="middle section-left start-activty-page hide" >
       <section>
-        <h2>Current Activity</h2>
+        <h2 class="current-activity-head">Current Activity</h2>
       </section>
+      <section>
+        <h2 class="completed-activity-head class hide">Completed Activity</h2>
+      </section>
+
+      <!-- <form class="clock-area-form"> -->
       <section class="move-section-in">
         <div class="clock-and-start-button">
           <div  class="intention-and-count-down">
@@ -97,22 +102,23 @@
             <button class="timer start-button">START</button>
             <!-- <button class="timer finish-button hide">COMPLETE!</button> -->
             <section class="log-button-area hide">
-            <button class="log-activity-button">Log Activity</button>
-          </section>
-            <div class="create-new-activity">
-            </div>
+            <button class="log-activity-button" onclick='logActivity'>Log Activity</button>
+            </section>
+            <section class="create-new-activity-button hide"><button class="new">Create A New Activity</button>
+            </section>
+            <!-- <div class="create-new-activity hide">
+            </div> -->
           </div>
         </div>
         </section>
       <section class="section-left log-activty-page" >
-        <section>
+        <!-- <section> moving this up a few spots -->
           <!-- <h2>Completed Activity</h2> -->
-        </section>
+        <!-- </section> -->
         <section class="move-section-in">
-        <div class="create-new-activity" hidden></div>
-
-          <!-- <button class="new">Create A New Activity</button> -->
-
+        <div class="create-new-activity" hidden>
+          <!-- moving this up a few spots <button class="new">Create A New Activity</button> -->
+        </div>
         </section>
       </section>
     </section>
