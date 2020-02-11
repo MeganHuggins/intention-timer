@@ -405,3 +405,37 @@ aside {
     background-color: #46424D;
     outline: none;
 }
+/* create new activity button, with margin to keep larger section */
+
+.create-new-activity-button {
+  width: 50%;
+  margin: 10% 10% 45% 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* past activity log card section */
+.past-activity-card {
+  text-align: left;
+  /* height: 5%; */
+  background-color: #46424D;
+}
+
+.past-activities-log-time {
+
+}
+.past-activities-log-user-goal {
+
+}
