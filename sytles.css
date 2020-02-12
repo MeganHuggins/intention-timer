@@ -200,7 +200,7 @@ form {
   grid-template-columns: repeat(2, 1fr);
   position: relative;
   left: 70px;
-  bottom: 20px;
+  bottom: 40px;
   font-size: 18px;
 }
 
@@ -240,6 +240,7 @@ input.long-input {
   color: #FFF;
   font-size: 24px;
   outline: none;
+
 
 }
 
@@ -354,21 +355,60 @@ aside {
 /*Dave's starting new section! Will need to reorganize!  */
 .start-activity-area {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   outline: none;
 }
 .start-activity-input {
   float: right;
-  width: 100%;
-  font-size: 24px;
+  width: 50%;
+  height: 100px;
+  margin: 0px 0px 0px 100px;
+  padding: 5px;
+  grid-column: 2 / 3;
   outline: none;
 }
-
+/* warning area */
+/* warning pic size */
+.activity-warning-image,
 .goal-warning-image,
 .minutes-warning-image,
 .seconds-warning-image {
-  width: 5%;
+  width: 25px;
+  display: inline-block;
 }
+/* warning sections display position */
+.activity-hidden-warning {
+  position: relative;
+  bottom: 15px;
+  left: 130px;
+}
+.goal-hidden-warning {
+  position: absolute;
+  bottom: 125px;
+  left: 50px;
+}
+
+.minutes-hidden-warning {
+  position: absolute;
+  top: 250px;
+  right: 715px;
+}
+
+.seconds-hidden-warning {
+  position: relative;
+  left: 460px;
+}
+ /* and display of warning text */
+.activity-warning-text,
+.goal-warning-text,
+.minutes-warning-text,
+.seconds-warning-text {
+  color: #FFF;
+  font-size: 12px;
+  display: inline-block;
+}
+
+
 
 .log-activity-button {
   width: 35%;
