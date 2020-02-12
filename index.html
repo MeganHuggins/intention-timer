@@ -59,7 +59,7 @@
             </section>
           <section class="minutes-input-area">
             <label for="minutes">Minutes</label>
-            <input id="minutes" class="short-input minutes-input" type="number" name="minutes" value="" required />
+            <input id="minutes" class="short-input minutes-input" type="number" name="minutes" required />
           </section>
               <section class="minutes-hidden-warning" hidden>
           <img class="minutes-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
@@ -67,7 +67,7 @@
         </section>
           <section class="seconds-input-area">
             <label for="seconds">Seconds</label>
-            <input id="seconds" class="short-input seconds-input" type="number" name="seconds" value="" required />
+            <input id="seconds" class="short-input seconds-input" type="number" name="seconds" required />
           </section>
               <section class="seconds-hidden-warning" hidden>
           <img class="seconds-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
@@ -89,8 +89,6 @@
       <section>
         <h2 class="completed-activity-head class hide">Completed Activity</h2>
       </section>
-
-      <!-- <form class="clock-area-form"> -->
       <section class="move-section-in">
         <div class="clock-and-start-button">
           <div  class="intention-and-count-down">
@@ -100,17 +98,15 @@
           </div>
           <div>
             <button class="timer start-button">START</button>
-            <!-- <button class="timer finish-button hide">COMPLETE!</button> -->
             <section class="log-button-area hide">
             <button class="log-activity-button" onclick='logActivity'>Log Activity</button>
             </section>
             <section class="create-new-activity-button hide"><button class="new">Create A New Activity</button>
             </section>
-            <!-- <div class="create-new-activity hide">
-            </div> -->
           </div>
         </div>
         </section>
+
       <section class="section-left log-activty-page" >
         <!-- <section> moving this up a few spots -->
           <!-- <h2>Completed Activity</h2> -->
@@ -123,7 +119,9 @@
       </section>
     </section>
       </section>
+
     </main>
+
     <aside>
     <section class=aside-header>
       <h2>Past Activities</h2>
@@ -132,8 +130,9 @@
       <p>You haven't logged any activities yet.</p>
       <p>Complete the form to the left to get started!</p>
     </section>
+    <section class="new-logged"></section>
   </aside>
-  <script src="main.js"></script>
 </body>
+<script src="form-card.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </html>
