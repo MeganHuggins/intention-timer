@@ -1,8 +1,11 @@
 console.log('wtf')
 // all variables
-var studyButton = document.querySelector(".study-button")
-var studyPicActive = document.querySelector(".lightbulb-active")
-var studyPicInactive = document.querySelector(".lightbulb")
+
+var upper = document.querySelector('.upper');
+var middle = document.querySelector('.middle');
+var studyButton = document.querySelector('.study-button')
+var studyPicActive = document.querySelector('.lightbulb-active')
+var studyPicInactive = document.querySelector('.lightbulb')
 var meditateButton = document.querySelector(".meditate-button")
 var meditatePicActive = document.querySelector(".lotus-flower-active")
 var meditatePicInactive = document.querySelector(".lotus-flower")
@@ -15,7 +18,6 @@ var secondsInput = document.querySelector('.seconds-input')
 var hiddenWarning = document.querySelector('.hidden-warning');
 var submit = document.querySelector('.start-activity');
 var startButton = document.querySelector('.timer');
-var activitySelected;
 var timer = document.querySelector('.timer')
 var pastActivitiesLog = document.querySelector(".past-activities-log");
 var activityOriginalMessage = document.querySelector(".activity-original-message")
@@ -26,6 +28,13 @@ var currentActivityHead = document.querySelector(".current-activity-head")
 var completedActivityHead =document.querySelector(".completed-activity-head")
 var createNewActivityButton = document.querySelector(".create-new-activity-button")
 var logButtonArea = document.querySelector('.log-button-area')
+var minutes = document.getElementById('minutes').value;
+var seconds = Number(document.getElementById('seconds').value);
+var minutesDisplayArea = document.querySelector('.time-in-mins');
+var secondsDisplayArea = document.querySelector('.time-in-secs');
+var userGoal = document.querySelector('.long-input').value;
+var userGoalDisplayArea = document.querySelector('.selected-action')
+var activitySelected;
 
 // event listeners
 studyButton.addEventListener('click', studyButtonOn)
@@ -36,9 +45,13 @@ startButton.addEventListener('click', countdown);
 logActivityButton.addEventListener('click', logActivity);
 createNewActivityButton.addEventListener('click', backToNewActivity)
 
+function createNewForm(){
+  newForm = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
+  console.log(newForm);
+}
+
 // make sure user has selected all values
 function checkInputValues() {
-  //*****write of or statement
   var goal = true
   if (userGoalInput.value==="") {
     document.querySelector('.goal-hidden-warning').hidden = false;
@@ -60,10 +73,8 @@ function checkInputValues() {
   } else {
     document.querySelector('.activity-hidden-warning').hidden = false;
     activitySelected = false;
-  }
+  } createNewForm();
   if (isActivitySelected && goal && minutes && seconds) {
-    var upper = document.querySelector('.upper');
-    var middle = document.querySelector('.middle');
     upper.classList.add('hide')
     middle.classList.remove('hide')
     // adding remove classLists to get back to countdown after first go around...
@@ -140,25 +151,38 @@ function countdown() {
 }
 
 
-function logActivity() {
-  // window change
-  currentActivityHead.classList.add('hide')
-  intentionAndCountdown.classList.add('hide')
-  timer.classList.add('hide')
-  logButtonArea.classList.add('hide')
-  completedActivityHead.classList.remove('hide')
-  createNewActivityButton.classList.remove('hide')
-  startButton.innerHTML= `START`
-  activityOriginalMessage.classList.add('hide')
-  var log = document.querySelector(".log")
-  var secondsInput = document.querySelector('.seconds-input');
-  pastActivitiesLog.insertAdjacentHTML('beforeend',
-  `<section class="past-activity-card">
-      <h4 class=>${activitySelected}</h4>
-      <p class="past-activities-log-time"> ${minutesInput.value} MIN  ${secondsInput.value} SEC</p>
-      <p class="past-activitites-log-user-goal">${userGoalInput.value}</p>
-    </section>`)
-}
+//megan's work to get past form inputs to create side cards
+  function logActivity() {
+    //switch page from middle to last page
+    // middle.classList.add('hide')
+
+    //activate makeNewCard method
+    var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
+    newActivity.makeNewCard();
+  }
+
+
+// dave trying to get the cards to go to past activity log
+// may have duplicate names
+
+
+// function logActivity() {
+//   // window change
+//   currentActivityHead.classList.add('hide')
+//   intentionAndCountdown.classList.add('hide')
+//   timer.classList.add('hide')
+//   logButtonArea.classList.add('hide')
+//   completedActivityHead.classList.remove('hide')
+//   createNewActivityButton.classList.remove('hide')
+//   startButton.innerHTML= `START`
+//   pastActivitiesLog.innerHTML = '';
+//
+//
+//   var secondsInput = document.querySelector('.seconds-input');
+//   pastActivitiesLog.insertAdjacentHTML('afterbegin', (`<div>${secondsInput}</div>`))
+// }
+
+
 
 // create new activity button takes back to original screen
 function backToNewActivity() {

@@ -328,6 +328,15 @@ aside {
   text-align: center;
 }
 
+.newActivityCard {
+  text-align: left;
+  padding: 0px 0px 0px 20px;
+  border: 2px solid hotpink;
+  background-color: #46424D;
+  margin-bottom: 20px;
+  box-shadow: 10px 8px 13px 0px rgba(38,34,45,1);
+}
+
 /* Classes for JS */
 .hide {
   display: none;
