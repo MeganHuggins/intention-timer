@@ -6,10 +6,6 @@ class MyForm {
     this.seconds = seconds;
   }
   makeNewCard(){
-    // var newLoggedCard = document.createElement('div');
-    // newLoggedCard.classList.add('newActivityCard');
-    // newLoggedCard.classList.add('card-text');
-    // newLoggedCard.innerHTML =
     pastActivitiesLog.innerHTML = '';
     pastActivitiesLog.insertAdjacentHTML('beforeend',
       ` <div class="newActivityCard">
@@ -23,6 +19,5 @@ class MyForm {
           <p class="goal-text">${this.userGoal}</p>
           </div>
         </div>`)
-      // return pastActiviesLog;
     }
 }
