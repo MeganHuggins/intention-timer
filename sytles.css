@@ -136,6 +136,7 @@ h2 {
   width: 0;
   height: 0;
 } */
+
 .study-button {
   color: #FFF;
   background-color: #46424D;
@@ -143,6 +144,7 @@ h2 {
   margin: 30px 0px;
   padding: 5px 50px;
   border: 3px solid #FFF;
+  cursor: pointer;
 }
 
 .meditate-button {
@@ -152,6 +154,7 @@ h2 {
   margin: 30px 0px;
   padding: 5px 50px;
   border: 3px solid #FFF;
+  cursor: pointer;
 }
 
 .exercise-button {
@@ -161,6 +164,7 @@ h2 {
   margin: 30px 0px;
   padding: 5px 50px;
   border: 3px solid #FFF;
+  cursor: pointer;
 }
 /* active buttons */
 .study-button-active {
@@ -170,6 +174,7 @@ h2 {
   margin: 30px 0px;
   padding: 5px 50px;
   outline: none;
+  cursor: pointer;
 }
 
 .meditate-button-active {
@@ -179,6 +184,7 @@ h2 {
   margin: 30px 0px;
   padding: 5px 50px;
   outline: none;
+  cursor: pointer;
 }
 
 .exercise-button-active {
@@ -188,6 +194,7 @@ h2 {
   margin: 30px 0px;
   padding: 5px 50px;
   outline: none;
+  cursor: pointer;
 }
 /* Form for 'main' page */
 .user-input-form {
@@ -267,6 +274,7 @@ input.start-activty {
     text-align: center;
     font-size: 25px;
     color: #FFF;
+
 }
 
 .selected-action {
@@ -308,6 +316,7 @@ button.new {
   border-radius: 5px;
   font-size: large;
   font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
 /* Target the aside portion of the webpage */
@@ -485,6 +494,7 @@ aside {
 .create-new-activity-button {
   width: 50%;
   margin: 10% 10% 45% 10%;
+  cursor: pointer;
 }
 
 
