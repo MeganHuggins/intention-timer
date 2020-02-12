@@ -42,36 +42,36 @@
             </div>
           </div>
           <section class="activity-hidden-warning" hidden>
-          <img class="goal-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p>An activity is required.</p>
+          <img class="activity-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
+          <p class="activity-warning-text">An activity is required.</p>
             </section>
         </section>
 
         <div class="user-input-form">
           <form class="input-form" action="index.html" method="post">
           <section class="user-goal-input-area">
-            <label for="user-goal">What would you like to accomplish durring this time?</label>
+            <label for="user-goal">What would you like to accomplish during this time?</label>
           <input class="long-input" type="text" name="user-x`goal" value="" required />
           </section>
           <section class="goal-hidden-warning" hidden>
           <img class="goal-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p>A description are required.</p>
+          <p class="goal-warning-text">A description are required.</p>
             </section>
           <section class="minutes-input-area">
             <label for="minutes">Minutes</label>
-            <input id="minutes" class="short-input minutes-input" type="number" name="minutes" value="" required />
+            <input id="minutes" class="short-input minutes-input" type="number" name="minutes" required />
           </section>
               <section class="minutes-hidden-warning" hidden>
           <img class="minutes-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p>Minutes are required.</p>
+          <p class="minutes-warning-text">Minutes are required.</p>
         </section>
           <section class="seconds-input-area">
             <label for="seconds">Seconds</label>
-            <input id="seconds" class="short-input seconds-input" type="number" name="seconds" value="" required />
+            <input id="seconds" class="short-input seconds-input" type="number" name="seconds" required />
           </section>
               <section class="seconds-hidden-warning" hidden>
           <img class="seconds-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p>Seconds are required.</p>
+          <p class="seconds-warning-text">Seconds are required.</p>
         </section>
         </form>
           <section class="start-activity-area">
@@ -97,18 +97,16 @@
           </div>
           <div>
             <button class="timer start-button">START</button>
-            <!-- <button class="timer finish-button hide">COMPLETE!</button> -->
             <section class="log-button-area hide">
             <button class="log-activity-button">Log Activity</button>
             </section>
             <section class="create-new-activity-button hide">
             <button class="new">Create A New Activity</button>
             </section>
-            <!-- <div class="create-new-activity hide">
-            </div> -->
           </div>
         </div>
         </section>
+
       <section class="section-left log-activty-page" >
         <!-- <section> moving this up a few spots -->
           <!-- <h2>Completed Activity</h2> -->
@@ -121,7 +119,9 @@
       </section>
     </section>
       </section>
+
     </main>
+
     <aside>
     <section class=aside-header>
       <h2>Past Activities</h2>
@@ -142,5 +142,6 @@
   </aside>
   <!-- <script src="  main.js"></script> -->
 </body>
+<script src="form-card.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </html>
