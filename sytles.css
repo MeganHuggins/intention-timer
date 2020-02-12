@@ -328,6 +328,15 @@ aside {
   text-align: center;
 }
 
+.newActivityCard {
+  text-align: left;
+  padding: 0px 0px 0px 20px;
+  border: 2px solid hotpink;
+  background-color: #46424D;
+  margin-bottom: 20px;
+  box-shadow: 10px 8px 13px 0px rgba(38,34,45,1);
+}
+
 /* Classes for JS */
 .hide {
   display: none;
@@ -377,6 +386,7 @@ aside {
   position: absolute;
   bottom: 125px;
   left: 50px;
+<<<<<<< HEAD
 }
 
 .minutes-hidden-warning {
@@ -399,6 +409,30 @@ aside {
   display: inline-block;
 }
 
+=======
+}
+
+.minutes-hidden-warning {
+  position: absolute;
+  top: 250px;
+  right: 715px;
+}
+
+.seconds-hidden-warning {
+  position: relative;
+  left: 460px;
+}
+ /* and display of warning text */
+.activity-warning-text,
+.goal-warning-text,
+.minutes-warning-text,
+.seconds-warning-text {
+  color: #FFF;
+  font-size: 12px;
+  display: inline-block;
+}
+
+>>>>>>> master
 
 
 .log-activity-button {
