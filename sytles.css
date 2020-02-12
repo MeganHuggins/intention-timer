@@ -143,6 +143,7 @@ h2 {
   border: 1px solid #FFF;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .meditate-button {
@@ -154,6 +155,8 @@ h2 {
   border: 1px solid #FFF;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
+
 }
 
 .exercise-button {
@@ -165,6 +168,8 @@ h2 {
   border: 1px solid #FFF;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
+
 }
 
 /* active buttons */
@@ -178,6 +183,8 @@ h2 {
   outline: none;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
+
 }
 
 .meditate-button-active {
@@ -189,6 +196,8 @@ h2 {
   outline: none;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
+
 }
 
 .exercise-button-active {
@@ -200,6 +209,8 @@ h2 {
   outline: none;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
+
 }
 
 /* Form for 'main' page */
@@ -322,6 +333,8 @@ button.new {
   border-radius: 5px;
   font-size: large;
   font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+
 }
 
 /* Target the aside portion of the webpage */
@@ -406,6 +419,8 @@ aside {
   margin: 0px 0px 0px 100px;
   padding: 5px;
   outline: none;
+  cursor: pointer;
+
 }
 /* warning area */
 /* warning pic size */
@@ -480,6 +495,8 @@ aside {
   outline: none;
   margin-bottom: 60px;
   font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+
 }
 
 /* different button borders by activity */
@@ -495,6 +512,7 @@ aside {
     color: #fff;
     background-color: #46424D;
     outline: none;
+    cursor: pointer;
 }
 
 .timer-meditate {
@@ -508,6 +526,7 @@ aside {
     color: #fff;
     background-color: #46424D;
     outline: none;
+    cursor: pointer;
 }
 
 .timer-exercise {
@@ -521,12 +540,15 @@ aside {
     color: #fff;
     background-color: #46424D;
     outline: none;
+    cursor: pointer;
 }
 /* create new activity button, with margin to keep larger section */
 
 .create-new-activity-button {
   width: 50%;
   margin: 10% 10% 45% 10%;
+  cursor: pointer;
+
 }
 
 

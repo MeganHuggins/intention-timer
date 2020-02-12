@@ -35,6 +35,7 @@ var secondsDisplayArea = document.querySelector('.time-in-secs');
 var userGoal = document.querySelector('.long-input').value;
 var userGoalDisplayArea = document.querySelector('.selected-action')
 var logActivityCard = document.querySelector('.newActivityCard')
+var clockAndStartButtonDiv = document.querySelector('.clock-and-start-button')
 var activitySelected;
 
 function createNewForm(){
@@ -84,6 +85,7 @@ function checkInputValues() {
   if (isActivitySelected && goal && minutes && seconds) {
     upper.classList.add('hide')
     middle.classList.remove('hide')
+    clockAndStartButtonDiv.classList.remove('hide')
     // adding remove classLists to get back to countdown after first go around...
     currentActivityHead.classList.remove('hide')
     intentionAndCountdown.classList.remove('hide')
@@ -168,6 +170,7 @@ function countdown() {
     newActivity.makeNewCard();
     // var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
     // newActivity.makeNewCard();
+
     activityOriginalMessage.classList.add('hide')
     currentActivityHead.classList.add('hide')
     intentionAndCountdown.classList.add('hide')
@@ -176,7 +179,6 @@ function countdown() {
     completedActivityHead.classList.remove('hide')
     createNewActivityButton.classList.remove('hide')
     startButton.innerHTML= `START`
-    logActivityCard.classList.add('activity-card-top-study')
   }
 
 
@@ -219,6 +221,7 @@ function countdown() {
 // create new activity button takes back to original screen
 function backToNewActivity() {
   // hide current contents
+  clockAndStartButtonDiv.classList.add('hide')
   completedActivityHead.classList.add('hide')
   createNewActivityButton.classList.add('hide')
   // bring back the original
