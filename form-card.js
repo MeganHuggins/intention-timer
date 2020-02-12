@@ -8,14 +8,15 @@ class MyForm {
   makeNewCard(){
     pastActivitiesLog.insertAdjacentHTML('beforeend',
       ` <div class="newActivityCard">
-          <div class="activity-card-top">
-          <p class="new-activity-activity">${this.activity}</p>
-            <p class="activity-card-minutes">${this.minutes} MIN
-            </p>
-            <p class="activity-card-seconds"> ${this.seconds} SECONDS
-            </p>
+          <div>
+          <p class="activity-text">${this.activity}</p>
           </div>
-          <p class="">${this.userGoal}</p>
+          <div>
+            <p class="minutes-seconds-text">${this.minutes} MIN ${this.seconds} SECONDS</p>
+          </div>
+          <div>
+          <p class="goal-text">${this.userGoal}</p>
+          </div>
         </div>`)
     }
 }
