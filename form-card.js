@@ -13,11 +13,11 @@ class MyForm {
     // pastActivitiesLog.innerHTML = '';
     pastActivitiesLog.insertAdjacentHTML('beforeend',
       ` <div class="newActivityCard">
-          <p class="">${this.activity}</p>
-          <div class="">
-            <p class="">${this.minutes} MIN
+          <div class="activity-card-top">
+          <p class="new-activity-activity">${this.activity}</p>
+            <p class="activity-card-minutes">${this.minutes} MIN
             </p>
-            <p class=""> ${this.seconds} SECONDS
+            <p class="activity-card-seconds"> ${this.seconds} SECONDS
             </p>
           </div>
           <p class="">${this.userGoal}</p>

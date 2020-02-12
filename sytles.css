@@ -13,7 +13,7 @@ body {
 header {
 grid-column: 1/13;
 background-color: #46424D;
-height: 75%;
+height: 65%;
 }
 
 h1 {
@@ -182,8 +182,8 @@ h2 {
 }
 
 .exercise-button-active {
-  color: #EFB7EC;
-  border: 3px solid #EFB7EC;
+  color: #FD8078;
+  border: 3px solid #FD8078;
   background-color: #46424D;
   margin: 30px 0px;
   padding: 5px 50px;
@@ -328,15 +328,43 @@ aside {
   text-align: center;
 }
 
-.newActivityCard {
+/* .newActivityCard {
   text-align: left;
   padding: 0px 0px 0px 20px;
   border: 2px solid hotpink;
   background-color: #46424D;
   margin-bottom: 20px;
   box-shadow: 10px 8px 13px 0px rgba(38,34,45,1);
+} */
+
+.newActivityCard {
+  text-align: left;
+  padding: 0px 0px 0px 10px;
+  /* border: 2px solid hotpink; */
+  background-color: #46424D;
+  margin-bottom: 20px;
+  box-shadow: 10px 8px 13px 0px rgba(38,34,45,1);
+  height: 125px;
+}
+.activity-card-top-study {
+  border-right: 3px solid #B3FD78;
 }
 
+.activity-card-top-meditate {
+  border-right: 3px solid #C278FD;
+}
+
+.activity-card-top-exercise {
+  border-right: 3px solid #FD8078;
+}
+
+.activity-card-minutes,
+.activity-card-seconds {
+  display: inline-block;
+}
+.new-activity-activity {
+  font-weight: bold;
+}
 /* Classes for JS */
 .hide {
   display: none;
@@ -386,7 +414,7 @@ aside {
   position: absolute;
   bottom: 125px;
   left: 50px;
-<<<<<<< HEAD
+
 }
 
 .minutes-hidden-warning {
@@ -404,43 +432,16 @@ aside {
 .goal-warning-text,
 .minutes-warning-text,
 .seconds-warning-text {
-  color: #FFF;
+  color: #EFB7EC;
   font-size: 12px;
   display: inline-block;
 }
-
-=======
-}
-
-.minutes-hidden-warning {
-  position: absolute;
-  top: 250px;
-  right: 715px;
-}
-
-.seconds-hidden-warning {
-  position: relative;
-  left: 460px;
-}
- /* and display of warning text */
-.activity-warning-text,
-.goal-warning-text,
-.minutes-warning-text,
-.seconds-warning-text {
-  color: #FFF;
-  font-size: 12px;
-  display: inline-block;
-}
-
->>>>>>> master
-
 
 .log-activity-button {
   width: 35%;
   font-size: 20px;
   border-radius: 5px;
   outline: none;
-
 }
 /* different button borders by activity */
 .timer-study {

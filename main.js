@@ -34,6 +34,7 @@ var minutesDisplayArea = document.querySelector('.time-in-mins');
 var secondsDisplayArea = document.querySelector('.time-in-secs');
 var userGoal = document.querySelector('.long-input').value;
 var userGoalDisplayArea = document.querySelector('.selected-action')
+var logActivityCard = document.querySelector('.newActivityCard')
 var activitySelected;
 
 function createNewForm(){
@@ -175,6 +176,7 @@ function countdown() {
     completedActivityHead.classList.remove('hide')
     createNewActivityButton.classList.remove('hide')
     startButton.innerHTML= `START`
+    logActivityCard.classList.add('activity-card-top-study')
   }
 
 
@@ -259,11 +261,12 @@ function studyButtonOn() {
   meditatePicActive.classList.add("hide")
   excercisePicInactive.classList.remove("hide")
   execerisePicActice.classList.add("hide")
-  activitySelected = 'Meditate'
+  activitySelected = 'Study'
   console.log(activitySelected)
   timer.classList.add('timer-study')
   timer.classList.remove('timer-meditate')
   timer.classList.remove('timer-exercise')
+
 }
 
 // turn meditate button as active, others as inactive
