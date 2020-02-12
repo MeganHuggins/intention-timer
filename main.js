@@ -20,6 +20,8 @@ var startButton = document.querySelector('.timer');
 var activitySelected;
 var timer = document.querySelector('.timer')
 var pastActivitiesLog = document.querySelector(".past-activities-log");
+var activityOriginalMessage = document.querySelector(".activity-original-message")
+// pastActivitiesLog.innerHTML = '';
 var logActivityButton = document.querySelector(".log-activity-button");
 var createNewActivity = document.querySelector(".create-new-activity")
 var intentionAndCountdown = document.querySelector(".intention-and-count-down")
@@ -177,10 +179,11 @@ function countdown() {
   // startButton.removeEventListener("click", countdown, true);
   var minutes = Number(document.getElementById('minutes').value);
   var seconds = Number(document.getElementById('seconds').value);
-  var totalSeconds = (minutes * 60) + seconds;
+  var totalSeconds = ((minutes * 60) + seconds) - 1;
   // create display areas for minutes/seconds
   var minutesDisplayArea = document.querySelector('.time-in-mins');
   var secondsDisplayArea = document.querySelector('.time-in-secs');
+  // shows time - 1 second
   // work around for delay in start
   // create log button to appear at end
   // var logButtonArea = document.querySelector('.log-button-area')
@@ -192,19 +195,19 @@ function countdown() {
   var minutesRemaining = parseInt(minutesRemainingDecimal, 10);
 // gets minutes out and just leaves seconds
   var secondsRemaining = (totalSeconds % 60);
-    totalSeconds--;
+    totalSeconds = totalSeconds - 1;
     // all if else statement just shows what is displayed
     // when clock hits 0 this is what happens
     if (secondsRemaining < 0) {
-      secondsDisplayArea.innerHTML = 'Party on, Garth!'
+      secondsDisplayArea.innerHTML = 'Great Job!'
       minutesDisplayArea.innerHTML = ` `;
       startButton.innerHTML= `COMPLETE!`
       logButtonArea.classList.remove('hide')
       window.clearInterval(timer);
       // if total seconds are less than 10 we need a 0 for place holder, otherwise 3:5
     } else if (secondsRemaining % 60 < 10) {
-      minutesDisplayArea.innerHTML = `${minutesRemaining}`;
-      secondsDisplayArea.innerHTML = `:0${secondsRemaining}`;
+      minutesDisplayArea.innerHTML = `${minutesRemaining}:`;
+      secondsDisplayArea.innerHTML = `0${secondsRemaining}`;
       // normal display with minutes and seconds displaying
     } else if ((totalSeconds) / 60 > 1) {
       minutesDisplayArea.innerHTML = `${minutesRemaining}`;
@@ -261,12 +264,56 @@ function logActivity() {
   completedActivityHead.classList.remove('hide')
   createNewActivityButton.classList.remove('hide')
   startButton.innerHTML= `START`
-  pastActivitiesLog.innerHTML = '';
+  activityOriginalMessage.classList.add('hide')
+  // pastActivitiesLog.innerHTML = ` `;
+  var log = document.querySelector(".log")
+  // pastActivitiesLog.innerHTML = log
   var secondsInput = document.querySelector('.seconds-input');
-  pastActivitiesLog.insertAdjacentHTML('afterbegin', (`<div>${secondsInput}</div>`))
+  pastActivitiesLog.insertAdjacentHTML('beforeend',
+  `<section class="past-activity-card">
+      <h4 class=>${activitySelected}</h4>
+      <p class="past-activities-log-time"> ${minutesInput.value} MIN  ${secondsInput.value} SEC</p>
+      <p class="past-activitites-log-user-goal">${userGoalInput.value}</p>
+    </section>`)
 }
+
   // button functionality
   // pastActivitiesLog.insertAdjacentHTML('beforeend',  )
+
+
+// create new activity button takes back to original screen
+
+function backToNewActivity() {
+  // hide current contents
+  completedActivityHead.classList.add('hide')
+  createNewActivityButton.classList.add('hide')
+  // bring back the original
+  var upper = document.querySelector('.upper');
+  upper.classList.remove('hide')
+  // need to clear orignal inputs for all 4
+  // targeting activity selected, clears activitySelected value
+  activitySelected = '';
+  console.log(activitySelected)
+  // need to reset pictures/text/border...pics first
+  studyPicInactive.classList.remove("hide")
+  studyPicActive.classList.add("hide")
+  meditatePicInactive.classList.remove("hide")
+  meditatePicActive.classList.add("hide")
+  excercisePicInactive.classList.remove("hide")
+  execerisePicActice.classList.add("hide")
+  // now border/text
+  studyButton.classList.remove("study-button-active")
+  studyButton.classList.add("study-button")
+  meditateButton.classList.remove("meditate-button-active")
+  meditateButton.classList.add("meditate-button")
+  exerciseButton.classList.remove("exercise-button-active")
+  exerciseButton.classList.add("exercise-button")
+  // now need to reset the values of the 3 inputes...
+  var inputForm = document.querySelector(".input-form")
+  inputForm.reset();
+  // var secondsDisplayArea = document.querySelector('.time-in-secs');
+  // secondsDisplayArea.innerHTML = ` `
+}
 
 
 // create new activity button takes back to original screen
@@ -311,7 +358,8 @@ function backToNewActivity() {
 
 // HEY DAVE!!!!!!!!!copy and paste below 250 before commiting!!!!!
 
-
+// log a card....
+// function logActivity() {}
 
 
 
