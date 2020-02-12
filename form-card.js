@@ -6,7 +6,6 @@ class MyForm {
     this.seconds = seconds;
   }
   makeNewCard(){
-    pastActivitiesLog.innerHTML = '';
     pastActivitiesLog.insertAdjacentHTML('beforeend',
       ` <div class="newActivityCard">
           <div>
