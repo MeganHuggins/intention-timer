@@ -165,23 +165,36 @@ function countdown() {
     //activate makeNewCard method
     var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
     newActivity.makeNewCard();
+    // var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
+    // newActivity.makeNewCard();
+    activityOriginalMessage.classList.add('hide')
+    currentActivityHead.classList.add('hide')
+    intentionAndCountdown.classList.add('hide')
+    timer.classList.add('hide')
+    logButtonArea.classList.add('hide')
+    completedActivityHead.classList.remove('hide')
+    createNewActivityButton.classList.remove('hide')
+    startButton.innerHTML= `START`
   }
 
 
+
 //megan's work to get past form inputs to create side cards
-  function logActivity() {
+  // function logActivity() {
     //switch page from middle to last page
     // middle.classList.add('hide')
 
     //activate makeNewCard method
-    var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
-    newActivity.makeNewCard();
-  }
-
-
-// dave trying to get the cards to go to past activity log
-// may have duplicate names
-
+  //   var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
+  //   newActivity.makeNewCard();
+  //   currentActivityHead.classList.add('hide')
+  //   intentionAndCountdown.classList.add('hide')
+  //   timer.classList.add('hide')
+  //   logButtonArea.classList.add('hide')
+  //   completedActivityHead.classList.remove('hide')
+  //   createNewActivityButton.classList.remove('hide')
+  //   startButton.innerHTML= `START`
+  // }
 
 // function logActivity() {
 //   // window change

@@ -10,7 +10,7 @@ class MyForm {
     // newLoggedCard.classList.add('newActivityCard');
     // newLoggedCard.classList.add('card-text');
     // newLoggedCard.innerHTML =
-    pastActivitiesLog.innerHTML = '';
+    // pastActivitiesLog.innerHTML = '';
     pastActivitiesLog.insertAdjacentHTML('beforeend',
       ` <div class="newActivityCard">
           <p class="">${this.activity}</p>
