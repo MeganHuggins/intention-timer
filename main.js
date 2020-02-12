@@ -17,15 +17,8 @@ var minutesInput = document.querySelector('.minutes-input');
 var secondsInput = document.querySelector('.seconds-input')
 var hiddenWarning = document.querySelector('.hidden-warning');
 var submit = document.querySelector('.start-activity');
-var minutes = Number(document.getElementById('minutes').value);
-var seconds = Number(document.getElementById('seconds').value);
-var minutesDisplayArea = document.querySelector('.time-in-mins');
-var secondsDisplayArea = document.querySelector('.time-in-secs');
-var userGoal = document.querySelector('.long-input').value;
-var userGoalDisplayArea = document.querySelector('.selected-action')
 var startButton = document.querySelector('.timer');
 var timer = document.querySelector('.timer')
-var form = document.querySelector(".user-input-form");
 var pastActivitiesLog = document.querySelector(".past-activities-log");
 var activityOriginalMessage = document.querySelector(".activity-original-message")
 var logActivityButton = document.querySelector(".log-activity-button");
@@ -41,6 +34,7 @@ var minutesDisplayArea = document.querySelector('.time-in-mins');
 var secondsDisplayArea = document.querySelector('.time-in-secs');
 var userGoal = document.querySelector('.long-input').value;
 var userGoalDisplayArea = document.querySelector('.selected-action')
+var logActivityCard = document.querySelector('.newActivityCard')
 var activitySelected;
 
 function createNewForm(){
@@ -63,7 +57,7 @@ function createNewForm(){
   console.log(newForm);
 }
 
-// make sure user has selected all values, grab info for side cards and timer page
+// make sure user has selected all values
 function checkInputValues() {
   var goal = true
   if (userGoalInput.value==="") {
@@ -99,7 +93,12 @@ function checkInputValues() {
     document.querySelector('.minutes-hidden-warning').hidden = true;
     document.querySelector('.seconds-hidden-warning').hidden = true;
     document.querySelector('.activity-hidden-warning').hidden = true;
-
+    var minutes = Number(document.getElementById('minutes').value);
+    var seconds = Number(document.getElementById('seconds').value);
+    var minutesDisplayArea = document.querySelector('.time-in-mins');
+    var secondsDisplayArea = document.querySelector('.time-in-secs');
+    var userGoal = document.querySelector('.long-input').value;
+    var userGoalDisplayArea = document.querySelector('.selected-action')
     userGoalDisplayArea.innerHTML = `${userGoal}`
     if (seconds < 10) {
     minutesDisplayArea.innerHTML = `${minutes}:`;
@@ -109,6 +108,7 @@ function checkInputValues() {
     secondsDisplayArea.innerHTML = `${seconds}`;
     }
   }
+  var form = document.querySelector(".user-input-form");
   form.addEventListener('submit', handleForm);
   function handleForm(event) {
     event.preventDefault();
@@ -158,11 +158,61 @@ function countdown() {
 }
 
 
-//Get past form inputs to create side cards
+//megan's work to get past form inputs to create side cards
   function logActivity() {
+    //switch page from middle to last page
+    // middle.classList.add('hide')
+
+    //activate makeNewCard method
     var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
     newActivity.makeNewCard();
+    // var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
+    // newActivity.makeNewCard();
+    activityOriginalMessage.classList.add('hide')
+    currentActivityHead.classList.add('hide')
+    intentionAndCountdown.classList.add('hide')
+    timer.classList.add('hide')
+    logButtonArea.classList.add('hide')
+    completedActivityHead.classList.remove('hide')
+    createNewActivityButton.classList.remove('hide')
+    startButton.innerHTML= `START`
+    logActivityCard.classList.add('activity-card-top-study')
   }
+
+
+
+//megan's work to get past form inputs to create side cards
+  // function logActivity() {
+    //switch page from middle to last page
+    // middle.classList.add('hide')
+
+    //activate makeNewCard method
+  //   var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
+  //   newActivity.makeNewCard();
+  //   currentActivityHead.classList.add('hide')
+  //   intentionAndCountdown.classList.add('hide')
+  //   timer.classList.add('hide')
+  //   logButtonArea.classList.add('hide')
+  //   completedActivityHead.classList.remove('hide')
+  //   createNewActivityButton.classList.remove('hide')
+  //   startButton.innerHTML= `START`
+  // }
+
+// function logActivity() {
+//   // window change
+//   currentActivityHead.classList.add('hide')
+//   intentionAndCountdown.classList.add('hide')
+//   timer.classList.add('hide')
+//   logButtonArea.classList.add('hide')
+//   completedActivityHead.classList.remove('hide')
+//   createNewActivityButton.classList.remove('hide')
+//   startButton.innerHTML= `START`
+//   pastActivitiesLog.innerHTML = '';
+//
+//
+//   var secondsInput = document.querySelector('.seconds-input');
+//   pastActivitiesLog.insertAdjacentHTML('afterbegin', (`<div>${secondsInput}</div>`))
+// }
 
 
 
@@ -211,11 +261,12 @@ function studyButtonOn() {
   meditatePicActive.classList.add("hide")
   excercisePicInactive.classList.remove("hide")
   execerisePicActice.classList.add("hide")
-  activitySelected = 'Meditate'
+  activitySelected = 'Study'
   console.log(activitySelected)
   timer.classList.add('timer-study')
   timer.classList.remove('timer-meditate')
   timer.classList.remove('timer-exercise')
+
 }
 
 // turn meditate button as active, others as inactive
