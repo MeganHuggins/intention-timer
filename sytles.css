@@ -401,13 +401,12 @@ input.short-input {
   cursor: pointer;
 }
 
-/* Create new activity page */
+/* create new activity page */
 button.new {
   position: relative;
-  left: 33%;
-  top: 20%;
+  margin-top: 90px;
   padding: 5px 60px;
-  border-radius: 5px;
+  border-radius: 2px;
   font-size: large;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
