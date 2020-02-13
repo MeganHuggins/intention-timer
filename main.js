@@ -155,6 +155,10 @@ function countdown() {
   }, 1000);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 // log activity cards
   function logActivity() {
     var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);

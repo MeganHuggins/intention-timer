@@ -186,7 +186,7 @@ h2 {
 
 /* Form for 'main' page */
 .user-input-form {
-  height: 300px;
+  height: 320px;
 }
 
 form {
@@ -218,7 +218,7 @@ label {
 
 .seconds-input-area {
   grid-column: 2 / 3;
-  padding: 23px 50px 0px 0px;
+  padding: 25px 50px 0px 0px;
 }
 
 .start-activity-area {
@@ -389,7 +389,7 @@ input.short-input {
   display: inline-block;
 }
 
-/* button for log actiity button after time runs out */
+/* Button for log activity button after time runs out  */
 .log-activity-button {
   width: 26%;
   padding: 8px;
@@ -401,7 +401,11 @@ input.short-input {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* create new activity page */
+=======
+/* Create new activity page */
+>>>>>>> master
 button.new {
   position: relative;
   left: 33%;
