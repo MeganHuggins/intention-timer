@@ -1,17 +1,16 @@
-console.log('wtf')
+console.log('test')
 // all variables
-
 var upper = document.querySelector('.upper');
 var middle = document.querySelector('.middle');
 var studyButton = document.querySelector('.study-button')
 var studyPicActive = document.querySelector('.lightbulb-active')
 var studyPicInactive = document.querySelector('.lightbulb')
-var meditateButton = document.querySelector(".meditate-button")
-var meditatePicActive = document.querySelector(".lotus-flower-active")
-var meditatePicInactive = document.querySelector(".lotus-flower")
-var exerciseButton = document.querySelector(".exercise-button")
-var execerisePicActice = document.querySelector(".shoe-active")
-var excercisePicInactive = document.querySelector(".shoe")
+var meditateButton = document.querySelector('.meditate-button')
+var meditatePicActive = document.querySelector('.lotus-flower-active')
+var meditatePicInactive = document.querySelector('.lotus-flower')
+var exerciseButton = document.querySelector('.exercise-button')
+var execerisePicActice = document.querySelector('.shoe-active')
+var excercisePicInactive = document.querySelector('.shoe')
 var userGoalInput = document.querySelector('.long-input');
 var minutesInput = document.querySelector('.minutes-input');
 var secondsInput = document.querySelector('.seconds-input')
@@ -19,14 +18,14 @@ var hiddenWarning = document.querySelector('.hidden-warning');
 var submit = document.querySelector('.start-activity');
 var startButton = document.querySelector('.timer');
 var timer = document.querySelector('.timer')
-var pastActivitiesLog = document.querySelector(".past-activities-log");
-var activityOriginalMessage = document.querySelector(".activity-original-message")
-var logActivityButton = document.querySelector(".log-activity-button");
-var createNewActivity = document.querySelector(".create-new-activity")
-var intentionAndCountdown = document.querySelector(".intention-and-count-down")
-var currentActivityHead = document.querySelector(".current-activity-head")
-var completedActivityHead =document.querySelector(".completed-activity-head")
-var createNewActivityButton = document.querySelector(".create-new-activity-button")
+var pastActivitiesLog = document.querySelector('.past-activities-log');
+var activityOriginalMessage = document.querySelector('.activity-original-message')
+var logActivityButton = document.querySelector('.log-activity-button');
+var createNewActivity = document.querySelector('.create-new-activity')
+var intentionAndCountdown = document.querySelector('.intention-and-count-down')
+var currentActivityHead = document.querySelector('.current-activity-head')
+var completedActivityHead =document.querySelector('.completed-activity-head')
+var createNewActivityButton = document.querySelector('.create-new-activity-button')
 var logButtonArea = document.querySelector('.log-button-area')
 var minutes = document.getElementById('minutes').value;
 var seconds = Number(document.getElementById('seconds').value);
@@ -38,12 +37,6 @@ var logActivityCard = document.querySelector('.newActivityCard')
 var clockAndStartButtonDiv = document.querySelector('.clock-and-start-button')
 var activitySelected;
 
-function createNewForm(){
-  newForm = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
-  console.log(newForm);
-}
-
-//*****create EventListener for submit
 // event listeners
 studyButton.addEventListener('click', studyButtonOn)
 meditateButton.addEventListener('click', meditateButtonOn)
@@ -53,6 +46,7 @@ startButton.addEventListener('click', countdown);
 logActivityButton.addEventListener('click', logActivity);
 createNewActivityButton.addEventListener('click', backToNewActivity)
 
+
 function createNewForm(){
   newForm = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
   console.log(newForm);
@@ -61,22 +55,22 @@ function createNewForm(){
 // make sure user has selected all values
 function checkInputValues() {
   var goal = true
-  if (userGoalInput.value==="") {
+  if (userGoalInput.value === ' ') {
     document.querySelector('.goal-hidden-warning').hidden = false;
     goal = false;
   }
   var minutes = true
-  if (minutesInput.value==="") {
+  if (minutesInput.value === '') {
     document.querySelector('.minutes-hidden-warning').hidden = false;
     minutes = false;
   }
   var seconds = true
-  if (secondsInput.value==="") {
+  if (secondsInput.value === '') {
     document.querySelector('.seconds-hidden-warning').hidden = false;
     seconds = false;
   }
   var isActivitySelected;
-  if (activitySelected==="Study" || activitySelected==="Meditate" || activitySelected==="Exercise") {
+  if (activitySelected === 'Study' || activitySelected === 'Meditate' || activitySelected === 'Exercise') {
     isActivitySelected = true;
   } else {
     document.querySelector('.activity-hidden-warning').hidden = false;
@@ -110,7 +104,7 @@ function checkInputValues() {
     secondsDisplayArea.innerHTML = `${seconds}`;
     }
   }
-  var form = document.querySelector(".user-input-form");
+  var form = document.querySelector('.user-input-form');
   form.addEventListener('submit', handleForm);
   function handleForm(event) {
     event.preventDefault();
@@ -119,8 +113,8 @@ function checkInputValues() {
 
 function countdown() {
   // get minutes and seconds from inputs and convert to total seconds, need integers not strings--use Number
-  // remove eventListener so user can't click twice...??????
-  // startButton.removeEventListener("click", countdown, true);
+  // remove eventListener so user can't click start twice...?????? WHY WONT IT WORK!
+  // startButton.removeEventListener('click', countdown, true);
   var minutes = Number(document.getElementById('minutes').value);
   var seconds = Number(document.getElementById('seconds').value);
   var totalSeconds = ((minutes * 60) + seconds) - 1;
@@ -159,18 +153,12 @@ function countdown() {
   }, 1000);
 }
 
-
 //megan's work to get past form inputs to create side cards
   function logActivity() {
     //switch page from middle to last page
-    // middle.classList.add('hide')
-
     //activate makeNewCard method
     var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
     newActivity.makeNewCard();
-    // var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
-    // newActivity.makeNewCard();
-
     activityOriginalMessage.classList.add('hide')
     currentActivityHead.classList.add('hide')
     intentionAndCountdown.classList.add('hide')
@@ -180,43 +168,6 @@ function countdown() {
     createNewActivityButton.classList.remove('hide')
     startButton.innerHTML= `START`
   }
-
-
-
-//megan's work to get past form inputs to create side cards
-  // function logActivity() {
-    //switch page from middle to last page
-    // middle.classList.add('hide')
-
-    //activate makeNewCard method
-  //   var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
-  //   newActivity.makeNewCard();
-  //   currentActivityHead.classList.add('hide')
-  //   intentionAndCountdown.classList.add('hide')
-  //   timer.classList.add('hide')
-  //   logButtonArea.classList.add('hide')
-  //   completedActivityHead.classList.remove('hide')
-  //   createNewActivityButton.classList.remove('hide')
-  //   startButton.innerHTML= `START`
-  // }
-
-// function logActivity() {
-//   // window change
-//   currentActivityHead.classList.add('hide')
-//   intentionAndCountdown.classList.add('hide')
-//   timer.classList.add('hide')
-//   logButtonArea.classList.add('hide')
-//   completedActivityHead.classList.remove('hide')
-//   createNewActivityButton.classList.remove('hide')
-//   startButton.innerHTML= `START`
-//   pastActivitiesLog.innerHTML = '';
-//
-//
-//   var secondsInput = document.querySelector('.seconds-input');
-//   pastActivitiesLog.insertAdjacentHTML('afterbegin', (`<div>${secondsInput}</div>`))
-// }
-
-
 
 // create new activity button takes back to original screen
 function backToNewActivity() {
@@ -232,38 +183,38 @@ function backToNewActivity() {
   activitySelected = '';
   console.log(activitySelected)
   // need to reset pictures/text/border...pics first
-  studyPicInactive.classList.remove("hide")
-  studyPicActive.classList.add("hide")
-  meditatePicInactive.classList.remove("hide")
-  meditatePicActive.classList.add("hide")
-  excercisePicInactive.classList.remove("hide")
-  execerisePicActice.classList.add("hide")
+  studyPicInactive.classList.remove('hide')
+  studyPicActive.classList.add('hide')
+  meditatePicInactive.classList.remove('hide')
+  meditatePicActive.classList.add('hide')
+  excercisePicInactive.classList.remove('hide')
+  execerisePicActice.classList.add('hide')
   // now border/text
-  studyButton.classList.remove("study-button-active")
-  studyButton.classList.add("study-button")
-  meditateButton.classList.remove("meditate-button-active")
-  meditateButton.classList.add("meditate-button")
-  exerciseButton.classList.remove("exercise-button-active")
-  exerciseButton.classList.add("exercise-button")
+  studyButton.classList.remove('study-button-active')
+  studyButton.classList.add('study-button')
+  meditateButton.classList.remove('meditate-button-active')
+  meditateButton.classList.add('meditate-button')
+  exerciseButton.classList.remove('exercise-button-active')
+  exerciseButton.classList.add('exercise-button')
   // now need to reset the values of the 3 inputes...
-  var inputForm = document.querySelector(".input-form")
+  var inputForm = document.querySelector('.input-form')
   inputForm.reset();
 }
 
 // trying to combine some functions...
 function studyButtonOn() {
-  studyButton.classList.add("study-button-active");
-  studyButton.classList.remove("study-button")
-  meditateButton.classList.remove("meditate-button-active")
-  meditateButton.classList.add("meditate-button")
-  exerciseButton.classList.remove("exercise-button-active")
-  exerciseButton.classList.add("exercise-button")
-  studyPicInactive.classList.add("hide")
-  studyPicActive.classList.remove("hide")
-  meditatePicInactive.classList.remove("hide")
-  meditatePicActive.classList.add("hide")
-  excercisePicInactive.classList.remove("hide")
-  execerisePicActice.classList.add("hide")
+  studyButton.classList.add('study-button-active');
+  studyButton.classList.remove('study-button')
+  meditateButton.classList.remove('meditate-button-active')
+  meditateButton.classList.add('meditate-button')
+  exerciseButton.classList.remove('exercise-button-active')
+  exerciseButton.classList.add('exercise-button')
+  studyPicInactive.classList.add('hide')
+  studyPicActive.classList.remove('hide')
+  meditatePicInactive.classList.remove('hide')
+  meditatePicActive.classList.add('hide')
+  excercisePicInactive.classList.remove('hide')
+  execerisePicActice.classList.add('hide')
   activitySelected = 'Study'
   console.log(activitySelected)
   timer.classList.add('timer-study')
@@ -274,18 +225,18 @@ function studyButtonOn() {
 
 // turn meditate button as active, others as inactive
 function meditateButtonOn() {
-  studyButton.classList.remove("study-button-active")
-  studyButton.classList.add("study-button")
-  meditateButton.classList.add("meditate-button-active")
-  meditateButton.classList.remove("meditate-button")
-  exerciseButton.classList.remove("exercise-button-active")
-  exerciseButton.classList.add("exercise-button")
-  studyPicInactive.classList.remove("hide")
-  studyPicActive.classList.add("hide")
-  meditatePicInactive.classList.add("hide")
-  meditatePicActive.classList.remove("hide")
-  excercisePicInactive.classList.remove("hide")
-  execerisePicActice.classList.add("hide")
+  studyButton.classList.remove('study-button-active')
+  studyButton.classList.add('study-button')
+  meditateButton.classList.add('meditate-button-active')
+  meditateButton.classList.remove('meditate-button')
+  exerciseButton.classList.remove('exercise-button-active')
+  exerciseButton.classList.add('exercise-button')
+  studyPicInactive.classList.remove('hide')
+  studyPicActive.classList.add('hide')
+  meditatePicInactive.classList.add('hide')
+  meditatePicActive.classList.remove('hide')
+  excercisePicInactive.classList.remove('hide')
+  execerisePicActice.classList.add('hide')
   activitySelected = 'Meditate'
   console.log(activitySelected)
   timer.classList.add('timer-meditate')
@@ -294,18 +245,18 @@ function meditateButtonOn() {
 }
 // turn exercise button as active, others as inacive
 function exerciseButtonOn() {
-  studyButton.classList.remove("study-button-active")
-  studyButton.classList.add("study-button")
-  meditateButton.classList.remove("meditate-button-active")
-  meditateButton.classList.add("meditate-button")
-  exerciseButton.classList.add("exercise-button-active")
-  exerciseButton.classList.remove("exercise-button")
-  studyPicInactive.classList.remove("hide")
-  studyPicActive.classList.add("hide")
-  meditatePicInactive.classList.remove("hide")
-  meditatePicActive.classList.add("hide")
-  excercisePicInactive.classList.add("hide")
-  execerisePicActice.classList.remove("hide")
+  studyButton.classList.remove('study-button-active')
+  studyButton.classList.add('study-button')
+  meditateButton.classList.remove('meditate-button-active')
+  meditateButton.classList.add('meditate-button')
+  exerciseButton.classList.add('exercise-button-active')
+  exerciseButton.classList.remove('exercise-button')
+  studyPicInactive.classList.remove('hide')
+  studyPicActive.classList.add('hide')
+  meditatePicInactive.classList.remove('hide')
+  meditatePicActive.classList.add('hide')
+  excercisePicInactive.classList.add('hide')
+  execerisePicActice.classList.remove('hide')
   activitySelected = 'Exercise'
   console.log(activitySelected)
   timer.classList.add('timer-exercise')
@@ -313,7 +264,7 @@ function exerciseButtonOn() {
   timer.classList.remove('timer-meditate')
 }
 
-// attempt at Event Propagation
+// failed attempt at Event Propagation for activity selected
 // allIconsParent.addEventListener('click', function(event) {
 //   if (event.target.className === 'study-button') {
 //     console.log(event.target.className)
