@@ -1,5 +1,4 @@
 body {
-  /* width: 100%; */
   display: grid;
   height: 100vh;
   margin: 0px;
@@ -9,7 +8,6 @@ body {
 }
 
 /* target main header */
-
 header {
 grid-column: 1/13;
 background-color: #46424D;
@@ -26,12 +24,8 @@ bottom: 8px;
 }
 
 /* Main page; always stay the same */
-
 main {
   grid-column: 1/9;
-}
-
-.medium-header {
 }
 
 h2 {
@@ -53,7 +47,6 @@ h2 {
 }
 
 /* Home page with activity imput options */
-
 .select-category-head {
   color: #FFF;
   margin: 10px 70px;
@@ -95,13 +88,9 @@ h2 {
 
 .select-category {
   color: #FFF;
-
 }
 
-
 /* button activities */
-
-
 .lightbulb-active {
   width: 25px;
   margin-top: 2px;
@@ -122,18 +111,6 @@ h2 {
   margin-top: 2px;
 }
 
-.lightbulb {
-
-}
-
-.lotus-flower {
-
-}
-
-.shoe {
-
-}
-
 .study-button {
   color: #FFF;
   background-color: #46424D;
@@ -143,6 +120,7 @@ h2 {
   border: 1px solid #FFF;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .meditate-button {
@@ -154,6 +132,7 @@ h2 {
   border: 1px solid #FFF;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .exercise-button {
@@ -165,10 +144,10 @@ h2 {
   border: 1px solid #FFF;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 /* active buttons */
-
 .study-button-active {
   color: #B3FD78;
   border: 1px solid #B3FD78;
@@ -178,6 +157,7 @@ h2 {
   outline: none;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .meditate-button-active {
@@ -189,6 +169,7 @@ h2 {
   outline: none;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .exercise-button-active {
@@ -200,12 +181,12 @@ h2 {
   outline: none;
   border-radius: 2px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 /* Form for 'main' page */
-
 .user-input-form {
-  height: 300px;
+  height: 320px;
 }
 
 form {
@@ -237,7 +218,7 @@ label {
 
 .seconds-input-area {
   grid-column: 2 / 3;
-  padding: 23px 50px 0px 0px;
+  padding: 25px 50px 0px 0px;
 }
 
 .start-activity-area {
@@ -269,18 +250,131 @@ input.short-input {
   outline: none;
 }
 
-input.start-activty {
+.start-activity-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  outline: none;
+}
 
+.start-activity-input {
+  width: 20%;
+  height: 40px;
+  padding: 5px;
+  position: absolute;
+  right: 160px;
+  bottom: 35px;
+  border-radius: 2px;
+  outline: none;
+  font-size: 17px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+/* warning area */
+/* warning pic size */
+.activity-warning-image,
+.goal-warning-image,
+.minutes-warning-image,
+.seconds-warning-image {
+  width: 25px;
+  display: inline-block;
+}
+
+/* warning sections display position */
+.activity-hidden-warning {
+  position: relative;
+  bottom: 15px;
+  left: 115px;
+}
+
+.goal-hidden-warning {
+  position: absolute;
+  bottom: 125px;
+  left: 50px;
+}
+
+.minutes-hidden-warning {
+  position: absolute;
+  top: 250px;
+  right: 715px;
+}
+
+.seconds-hidden-warning {
+  position: relative;
+  left: 460px;
+}
+
+.minutes-hidden-warning {
+  position: absolute;
+  top: 250px;
+  right: 715px;
+}
+
+.seconds-hidden-warning {
+  position: relative;
+  left: 460px;
+}
+
+ /* and display of warning text */
+.activity-warning-text,
+.goal-warning-text,
+.minutes-warning-text,
+.seconds-warning-text {
+  color: #EFB7EC;
+  font-size: 12px;
+  display: inline-block;
 }
 
 /* Start clock page  */
-
 .clock-and-start-button {
     border: 1px #46424D solid;
     text-align: center;
     font-size: 25px;
     color: #FFF;
     height: 550px;
+}
+
+/* different button borders by activity */
+.timer-study {
+    border: 3px solid #B3FD78;
+    font-size: 25px;
+    font-weight: 300;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    height: 220px;
+    width: 220px;
+    color: #fff;
+    background-color: #46424D;
+    outline: none;
+    cursor: pointer;
+}
+
+.timer-meditate {
+    border: 3px solid #C278FD;
+    font-size: 25px;
+    font-weight: 300;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    height: 220px;
+    width: 220px;
+    color: #fff;
+    background-color: #46424D;
+    outline: none;
+    cursor: pointer;
+}
+
+.timer-exercise {
+    border: 3px solid #FD8078;
+    font-size: 25px;
+    font-weight: 300;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    height: 220px;
+    width: 220px;
+    color: #fff;
+    background-color: #46424D;
+    outline: none;
+    cursor: pointer;
 }
 
 .selected-action {
@@ -295,25 +389,19 @@ input.start-activty {
   display: inline-block;
 }
 
-/* button.timer {
-    border: 3px solid #C278FD;
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 50%;
-    margin-bottom: 50px;
-    height: 220px;
-    width: 220px;
-    color: #fff;
-    background-color: #46424D;
-    outline: none;
-} */
-
-/* Create new activity page */
-
-.create-new-activity {
-  height: 525px;
+/* Button for log activity button after time runs out  */
+.log-activity-button {
+  width: 26%;
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 60px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
+/* Create new activity page */
 button.new {
   position: relative;
   left: 33%;
@@ -322,10 +410,10 @@ button.new {
   border-radius: 5px;
   font-size: large;
   font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
 }
 
 /* Target the aside portion of the webpage */
-
 aside {
   border-left: 2px solid #46424D;
   grid-column: 9/13;
@@ -380,179 +468,4 @@ aside {
 /* Classes for JS */
 .hide {
   display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-/*Dave's starting new section! Will need to reorganize!  */
-.start-activity-area {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  outline: none;
-}
-.start-activity-input {
-  float: right;
-  grid-column: 2 / 3;
-  width: 50%;
-  height: 100px;
-  margin: 0px 0px 0px 100px;
-  padding: 5px;
-  outline: none;
-}
-/* warning area */
-/* warning pic size */
-.activity-warning-image,
-.goal-warning-image,
-.minutes-warning-image,
-.seconds-warning-image {
-  width: 25px;
-  display: inline-block;
-}
-/* warning sections display position */
-.activity-hidden-warning {
-  position: relative;
-  bottom: 15px;
-  left: 115px;
-}
-.goal-hidden-warning {
-  position: absolute;
-  bottom: 125px;
-  left: 50px;
-<<<<<<< HEAD
-}
-
-.minutes-hidden-warning {
-  position: absolute;
-  top: 250px;
-  right: 715px;
-}
-
-.seconds-hidden-warning {
-  position: relative;
-  left: 460px;
-}
- /* and display of warning text */
-.activity-warning-text,
-.goal-warning-text,
-.minutes-warning-text,
-.seconds-warning-text {
-  color: #FFF;
-  font-size: 12px;
-  display: inline-block;
-}
-
-
-.minutes-hidden-warning {
-  position: absolute;
-  top: 250px;
-  right: 715px;
-}
-
-.seconds-hidden-warning {
-  position: relative;
-  left: 460px;
-}
-
- /* and display of warning text */
-.activity-warning-text,
-.goal-warning-text,
-.minutes-warning-text,
-.seconds-warning-text {
-  color: #EFB7EC;
-  font-size: 12px;
-  display: inline-block;
-}
-
-
-.log-activity-button {
-  width: 26%;
-  padding: 8px;
-  font-size: 20px;
-  border-radius: 5px;
-  outline: none;
-  margin-bottom: 60px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* different button borders by activity */
-
-.timer-study {
-    border: 3px solid #B3FD78;
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 50%;
-    margin-bottom: 40px;
-    height: 220px;
-    width: 220px;
-    color: #fff;
-    background-color: #46424D;
-    outline: none;
-}
-
-.timer-meditate {
-    border: 3px solid #C278FD;
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 50%;
-    margin-bottom: 50px;
-    height: 220px;
-    width: 220px;
-    color: #fff;
-    background-color: #46424D;
-    outline: none;
-}
-
-.timer-exercise {
-    border: 3px solid #FD8078;
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 50%;
-    margin-bottom: 50px;
-    height: 220px;
-    width: 220px;
-    color: #fff;
-    background-color: #46424D;
-    outline: none;
-}
-/* create new activity button, with margin to keep larger section */
-
-.create-new-activity-button {
-  width: 50%;
-  margin: 10% 10% 45% 10%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* past activity log card section */
-.past-activity-card {
-  text-align: left;
-  /* height: 5%; */
-  background-color: #46424D;
-}
-
-.past-activities-log-time {
-
-}
-.past-activities-log-user-goal {
-
 }
