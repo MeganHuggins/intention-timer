@@ -42,10 +42,9 @@ studyButton.addEventListener('click', studyButtonOn)
 meditateButton.addEventListener('click', meditateButtonOn)
 exerciseButton.addEventListener('click', exerciseButtonOn)
 submit.addEventListener('click', checkInputValues);
-startButton.addEventListener('click', countdown);
+startButton.addEventListener('click', startCountDownAndDisableButton);
 logActivityButton.addEventListener('click', logActivity);
 createNewActivityButton.addEventListener('click', backToNewActivity)
-
 
 function createNewForm(){
   newForm = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
@@ -55,7 +54,7 @@ function createNewForm(){
 // make sure user has selected all values
 function checkInputValues() {
   var goal = true
-  if (userGoalInput.value === ' ') {
+  if (userGoalInput.value === '') {
     document.querySelector('.goal-hidden-warning').hidden = false;
     goal = false;
   }
@@ -111,10 +110,13 @@ function checkInputValues() {
   }
 }
 
+// can't remove an event listener while function is running..what if an intermediary function goes inbetween that calls the countdown and disables the event Listener????
+function startCountDownAndDisableButton() {
+  countdown();
+}
+
 function countdown() {
-  // get minutes and seconds from inputs and convert to total seconds, need integers not strings--use Number
-  // remove eventListener so user can't click start twice...?????? WHY WONT IT WORK!
-  // startButton.removeEventListener('click', countdown, true);
+  startButton.removeEventListener('click', startCountDownAndDisableButton);
   var minutes = Number(document.getElementById('minutes').value);
   var seconds = Number(document.getElementById('seconds').value);
   var totalSeconds = ((minutes * 60) + seconds) - 1;
@@ -122,11 +124,11 @@ function countdown() {
   var minutesDisplayArea = document.querySelector('.time-in-mins');
   var secondsDisplayArea = document.querySelector('.time-in-secs');
   var timer = setInterval(function() {
-    // get total seconds back to minutes and seconds to use
+  // get total seconds back to minutes and seconds to use
   var minutesRemainingDecimal = (totalSeconds / 60);
   // converts minutes remaining from float to integer
   var minutesRemaining = parseInt(minutesRemainingDecimal, 10);
-// gets minutes out and just leaves seconds
+  // gets minutes out and just leaves seconds
   var secondsRemaining = (totalSeconds % 60);
     totalSeconds = totalSeconds - 1;
     // all if else statement just shows what is displayed
@@ -153,10 +155,8 @@ function countdown() {
   }, 1000);
 }
 
-//megan's work to get past form inputs to create side cards
+// log activity cards
   function logActivity() {
-    //switch page from middle to last page
-    //activate makeNewCard method
     var newActivity = new MyForm(activitySelected, userGoalInput.value, minutesInput.value, secondsInput.value);
     newActivity.makeNewCard();
     activityOriginalMessage.classList.add('hide')
@@ -167,6 +167,9 @@ function countdown() {
     completedActivityHead.classList.remove('hide')
     createNewActivityButton.classList.remove('hide')
     startButton.innerHTML= `START`
+    // adding event listener back so you can do another round, or ten!
+    startButton.addEventListener('click', startCountDownAndDisableButton);
+
   }
 
 // create new activity button takes back to original screen
@@ -175,6 +178,7 @@ function backToNewActivity() {
   clockAndStartButtonDiv.classList.add('hide')
   completedActivityHead.classList.add('hide')
   createNewActivityButton.classList.add('hide')
+  middle.classList.add('hide')
   // bring back the original
   var upper = document.querySelector('.upper');
   upper.classList.remove('hide')
@@ -220,7 +224,6 @@ function studyButtonOn() {
   timer.classList.add('timer-study')
   timer.classList.remove('timer-meditate')
   timer.classList.remove('timer-exercise')
-
 }
 
 // turn meditate button as active, others as inactive
@@ -243,6 +246,7 @@ function meditateButtonOn() {
   timer.classList.remove('timer-exercise')
   timer.classList.remove('timer-study')
 }
+
 // turn exercise button as active, others as inacive
 function exerciseButtonOn() {
   studyButton.classList.remove('study-button-active')
