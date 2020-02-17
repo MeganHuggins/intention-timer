@@ -9,18 +9,18 @@ body {
 
 /* target main header */
 header {
-grid-column: 1/13;
-background-color: #46424D;
-height: 78%;
+  grid-column: 1/13;
+  background-color: #46424D;
+  height: 78%;
 }
 
 h1 {
-text-align: center;
-color: #FFF;
-font-weight: 300;
-font-size: 25px;
-position: relative;
-bottom: 8px;
+  text-align: center;
+  color: #FFF;
+  font-weight: 300;
+  font-size: 25px;
+  position: relative;
+  bottom: 8px;
 }
 
 /* Main page; always stay the same */
@@ -43,7 +43,7 @@ h2 {
 .move-section-in {
   background-color: #46424D;
   margin-bottom: 20px;
-  box-shadow: 10px 8px 13px 0px rgba(38,34,45,1);
+  box-shadow: 10px 8px 13px 0px rgba(38, 34, 45, 1);
 }
 
 /* Home page with activity imput options */
@@ -315,7 +315,7 @@ input.short-input {
   left: 460px;
 }
 
- /* and display of warning text */
+/* and display of warning text */
 .activity-warning-text,
 .goal-warning-text,
 .minutes-warning-text,
@@ -327,54 +327,54 @@ input.short-input {
 
 /* Start clock page  */
 .clock-and-start-button {
-    border: 1px #46424D solid;
-    text-align: center;
-    font-size: 25px;
-    color: #FFF;
-    height: 550px;
+  border: 1px #46424D solid;
+  text-align: center;
+  font-size: 25px;
+  color: #FFF;
+  height: 550px;
 }
 
 /* different button borders by activity */
 .timer-study {
-    border: 3px solid #B3FD78;
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 50%;
-    margin-bottom: 40px;
-    height: 220px;
-    width: 220px;
-    color: #fff;
-    background-color: #46424D;
-    outline: none;
-    cursor: pointer;
+  border: 3px solid #B3FD78;
+  font-size: 25px;
+  font-weight: 300;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  height: 220px;
+  width: 220px;
+  color: #fff;
+  background-color: #46424D;
+  outline: none;
+  cursor: pointer;
 }
 
 .timer-meditate {
-    border: 3px solid #C278FD;
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 50%;
-    margin-bottom: 50px;
-    height: 220px;
-    width: 220px;
-    color: #fff;
-    background-color: #46424D;
-    outline: none;
-    cursor: pointer;
+  border: 3px solid #C278FD;
+  font-size: 25px;
+  font-weight: 300;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  height: 220px;
+  width: 220px;
+  color: #fff;
+  background-color: #46424D;
+  outline: none;
+  cursor: pointer;
 }
 
 .timer-exercise {
-    border: 3px solid #FD8078;
-    font-size: 25px;
-    font-weight: 300;
-    border-radius: 50%;
-    margin-bottom: 50px;
-    height: 220px;
-    width: 220px;
-    color: #fff;
-    background-color: #46424D;
-    outline: none;
-    cursor: pointer;
+  border: 3px solid #FD8078;
+  font-size: 25px;
+  font-weight: 300;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  height: 220px;
+  width: 220px;
+  color: #fff;
+  background-color: #46424D;
+  outline: none;
+  cursor: pointer;
 }
 
 .selected-action {
@@ -437,7 +437,7 @@ aside {
   bottom: 28px;
   background-color: #46424D;
   border-radius: 5px;
-  box-shadow: 10px 8px 13px 0px rgba(38,34,45,1);
+  box-shadow: 10px 8px 13px 0px rgba(38, 34, 45, 1);
   text-align: left;
   color: #fff;
 }

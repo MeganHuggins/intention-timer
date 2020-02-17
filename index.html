@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Intention Timer</title>
   <link rel="stylesheet" type="text/css" href="sytles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <h1>INTENTION TIMER</h1>
@@ -21,65 +23,65 @@
           <div class="all-icons">
             <div class="study-area">
               <button class="study-button" value="study-button">
-              <image class="activity-icon lightbulb" src="assets/images/study.svg" alt="Lightbulb lighting up" />
-              <image class="hide lightbulb-active" src="assets/images/study-active.svg" />
-              <p class="icon-text">Study</p>
+                <image class="activity-icon lightbulb" src="assets/images/study.svg" alt="Lightbulb lighting up" />
+                <image class="hide lightbulb-active" src="assets/images/study-active.svg" />
+                <p class="icon-text">Study</p>
               </button>
             </div>
             <div class="meditate" value="meditate-button">
               <button class="meditate-button">
-              <image class="activity-icon lotus-flower" src="assets/images/meditate.svg" alt="Lotus flower">
-              <image class="lotus-flower-active hide" src="assets/images/meditate-active.svg" />
-              <p class="icon-text">Meditate</p>
+                <image class="activity-icon lotus-flower" src="assets/images/meditate.svg" alt="Lotus flower">
+                  <image class="lotus-flower-active hide" src="assets/images/meditate-active.svg" />
+                  <p class="icon-text">Meditate</p>
               </button>
             </div>
             <div class="exercise">
               <button class="exercise-button" value="exercise-button">
                 <image class="activity-icon shoe" src="assets/images/exercise.svg" alt="A running shoe">
-                <image class="hide shoe-active" src="assets/images/exercise-active.svg" >
-                <p class="icon-text">Exercise</p>
+                  <image class="hide shoe-active" src="assets/images/exercise-active.svg">
+                    <p class="icon-text">Exercise</p>
               </button>
             </div>
           </div>
           <section class="activity-hidden-warning" hidden>
-          <img class="activity-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p class="activity-warning-text">An activity is required.</p>
-            </section>
+            <img class="activity-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
+            <p class="activity-warning-text">An activity is required.</p>
+          </section>
         </section>
         <div class="user-input-form">
           <form class="input-form" action="index.html" method="post">
-          <section class="user-goal-input-area">
-            <label for="user-goal">What would you like to accomplish during this time?</label>
-          <input class="long-input" type="text" name="user-x`goal" value="" required />
-          </section>
-          <section class="goal-hidden-warning" hidden>
-          <img class="goal-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p class="goal-warning-text">A description are required.</p>
+            <section class="user-goal-input-area">
+              <label for="user-goal">What would you like to accomplish during this time?</label>
+              <input class="long-input" type="text" name="user-x`goal" value="" required />
             </section>
-          <section class="minutes-input-area">
-            <label for="minutes">Minutes</label>
-            <input id="minutes" class="short-input minutes-input" type="number" name="minutes" required />
-          </section>
-              <section class="minutes-hidden-warning" hidden>
-          <img class="minutes-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p class="minutes-warning-text">Minutes are required.</p>
-        </section>
-          <section class="seconds-input-area">
-            <label for="seconds">Seconds</label>
-            <input id="seconds" class="short-input seconds-input" type="number" name="seconds" required />
-          </section>
-              <section class="seconds-hidden-warning" hidden>
-          <img class="seconds-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
-          <p class="seconds-warning-text">Seconds are required.</p>
-        </section>
-        </form>
+            <section class="goal-hidden-warning" hidden>
+              <img class="goal-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
+              <p class="goal-warning-text">A description are required.</p>
+            </section>
+            <section class="minutes-input-area">
+              <label for="minutes">Minutes</label>
+              <input id="minutes" class="short-input minutes-input" type="number" name="minutes" required />
+            </section>
+            <section class="minutes-hidden-warning" hidden>
+              <img class="minutes-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
+              <p class="minutes-warning-text">Minutes are required.</p>
+            </section>
+            <section class="seconds-input-area">
+              <label for="seconds">Seconds</label>
+              <input id="seconds" class="short-input seconds-input" type="number" name="seconds" required />
+            </section>
+            <section class="seconds-hidden-warning" hidden>
+              <img class="seconds-warning-image" src="assets/images/warning.svg" alt="Warning Exclamation Point">
+              <p class="seconds-warning-text">Seconds are required.</p>
+            </section>
+          </form>
           <section class="start-activity-area">
             <button class="start-activity-input start-activity" type="submit" name="submit-button" value="START ACTIVITY">START ACTIVITY</button>
           </section>
         </div>
       </section>
     </section>
-      <section class="middle section-left start-activty-page hide" >
+    <section class="middle section-left start-activty-page hide">
       <section>
         <h2 class="current-activity-head">Current Activity</h2>
       </section>
@@ -88,7 +90,7 @@
       </section>
       <section class="move-section-in">
         <div class="clock-and-start-button">
-          <div  class="intention-and-count-down">
+          <div class="intention-and-count-down">
             <p class="selected-action"></p>
             <p class="time-in-mins selected-time"></p>
             <p class="time-in-secs selected-time"></p>
@@ -96,35 +98,36 @@
           <div>
             <button class="timer start-button">START</button>
             <section class="log-button-area hide">
-            <button class="log-activity-button">LOG ACTIVITY</button>
+              <button class="log-activity-button">LOG ACTIVITY</button>
             </section>
             <section class="create-new-activity-button hide">
-            <button class="new">CREATE A NEW ACTIVITY</button>
+              <button class="new">CREATE A NEW ACTIVITY</button>
             </section>
           </div>
         </div>
-        </section>
-      <section class="section-left log-activty-page" >
+      </section>
+      <section class="section-left log-activty-page">
         <section class="move-section-in">
-        <div class="create-new-activity" hidden>
-        </div>
+          <div class="create-new-activity" hidden>
+          </div>
         </section>
       </section>
     </section>
-      </section>
-    </main>
-    <aside>
+    </section>
+  </main>
+  <aside>
     <section class=aside-header>
       <h2>Past Activities</h2>
     </section>
     <section class="past-activities-log">
       <section class="activity-original-message">
-      <p>You haven't logged any activities yet.</p>
-      <p>Complete the form to the left to get started!</p>
-    </section>
+        <p>You haven't logged any activities yet.</p>
+        <p>Complete the form to the left to get started!</p>
+      </section>
     </section>
   </aside>
 </body>
 <script src="form-card.js"></script>
 <script type="text/javascript" src="main.js"></script>
+
 </html>
